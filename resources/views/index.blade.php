@@ -1108,12 +1108,12 @@
                     </div>
                     <div class="p-4 md:w-2/3 lg:w-3/5 flex flex-col justify-between">
                         <div>
-                            <h3 class="font-bold text-primary text-xl mb-2">interior office</h3>
+                            <h3 class="font-bold text-primary text-xl mb-2">Exhibition Booth</h3>
                             <ul class="list-disc list-inside mb-10">
                                 <li class="text-primary font-light capitalize mb-2">
                                     Gaya Desain :
                                     <span class="font-bold text-base text-primary capitalize">
-                                        Scandinavian Minimalist
+                                        modern industrial
                                     </span>
                                 </li>
                                 <li class="text-primary font-light capitalize mb-2">
@@ -1125,7 +1125,7 @@
                                 <li class="text-primary font-light capitalize mb-2">
                                     finishing :
                                     <span class="font-bold text-base text-primary capitalize">
-                                        HPL, Wpc
+                                        HPL, stiker
                                     </span>
                                 </li>
                             </ul>
@@ -1189,12 +1189,12 @@
                     </div>
                     <div class="p-4 md:w-2/3 lg:w-3/5 flex flex-col justify-between">
                         <div>
-                            <h3 class="font-bold text-primary text-xl mb-2">Kitchen Set Scandinavian</h3>
+                            <h3 class="font-bold text-primary text-xl mb-2">Exhibition Booth</h3>
                             <ul class="list-disc list-inside mb-10">
                                 <li class="text-primary font-light capitalize mb-2">
                                     Gaya Desain :
                                     <span class="font-bold text-base text-primary capitalize">
-                                        Scandinavian Minimalist
+                                        Modern industrial
                                     </span>
                                 </li>
                                 <li class="text-primary font-light capitalize mb-2">
