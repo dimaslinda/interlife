@@ -8,20 +8,17 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Mail\Mailables\Address;
 
-class ContactFormMail extends Mailable
+class TestMail extends Mailable
 {
-    use SerializesModels;
-
-    public $data;
+    use Queueable, SerializesModels;
 
     /**
      * Create a new message instance.
      */
-    public function __construct($data)
+    public function __construct()
     {
-        $this->data = $data;
+        //
     }
 
     /**
@@ -30,8 +27,7 @@ class ContactFormMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address(env('MAIL_FROM_ADDRESS', 'customerservice@interlifefurniture.id'), env('MAIL_FROM_NAME', 'Interlife Furniture')),
-            subject: 'Pesan Baru dari Website - ' . $this->data['nama'],
+            subject: 'Test Mail',
         );
     }
 
@@ -41,7 +37,7 @@ class ContactFormMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'emails.contact',
+            markdown: 'emails.test',
         );
     }
 

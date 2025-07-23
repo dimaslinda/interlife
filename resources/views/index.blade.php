@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -38,38 +41,38 @@
                     <ul
                         class="font-medium capitalize flex flex-col p-4 lg:p-0 mt-4 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0">
                         <li>
-                            <a href="#"
+                            <a href="/"
                                 class="block py-2 px-3 text-white rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-secondary lg:p-0"
                                 aria-current="page">
                                 Beranda
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="#tentang"
                                 class="block py-2 px-3 text-white rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-secondary lg:p-0">
                                 tentang
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="#layanan"
                                 class="block py-2 px-3 text-white rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-secondary lg:p-0">
                                 layanan
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="#portofolio"
                                 class="block py-2 px-3 text-white rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-secondary lg:p-0">
                                 portofolio
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="#testimoni"
                                 class="block py-2 px-3 text-white rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-secondary lg:p-0">
                                 testimoni
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="#kontak"
                                 class="block py-2 px-3 text-white rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-secondary lg:p-0">
                                 kontak
                             </a>
@@ -85,13 +88,16 @@
     <section
         class="bg-center bg-cover bg-no-repeat bg-[url('../../public/img/general/bg-banner.webp')] bg-banner/60 bg-blend-multiply">
         <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl">
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl"
+                data-aos="fade-up" data-aos-delay="200">
                 Wujudkan Hunian Impian, Mulai dari sini!
             </h1>
-            <p class="mb-8 text-lg font-normal text-white lg:text-xl sm:px-16 lg:px-48">
+            <p class="mb-8 text-lg font-normal text-white lg:text-xl sm:px-16 lg:px-48" data-aos="fade-up"
+                data-aos-delay="400">
                 Kitchen Set | Custom Furniture | Interior - Langsung dari Workshop Profesional
             </p>
-            <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+            <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0" data-aos="fade-up"
+                data-aos-delay="600">
                 <a href="#"
                     class="inline-flex justify-center capitalize items-center py-3 px-5 text-base font-medium text-center text-[#575A4A] rounded-full bg-[#D9D7CB] hover:bg-[#D9D7CB]/95">
                     konsultasi gratis sekarang
@@ -104,18 +110,18 @@
         </div>
     </section>
 
-    <section class="bg-secondary py-10 lg:py-24">
+    <section id="tentang" class="bg-secondary py-10 lg:py-24">
         <div class="container mx-auto p-6">
             <div class="flex flex-col gap-5 justify-center items-center">
-                <div class="text-center text-2xl lg:text-3xl xl:text-4xl font-bold text-primary">
+                <div class="text-center text-2xl lg:text-3xl xl:text-4xl font-bold text-primary" data-aos="fade-up">
                     Kenapa memilih Interlife Furniture?
                 </div>
 
                 <div
                     class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-10 w-full max-w-7xl px-4 sm:px-0">
                     <!-- Card 1 -->
-                    <div
-                        class="bg-primary rounded-lg p-4 md:p-6 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-primary rounded-lg p-4 md:p-6 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-shadow duration-300"
+                        data-aos="fade-up" data-aos-delay="100">
                         <div
                             class="bg-white rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mb-3 md:mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="102" height="101" viewBox="0 0 102 101"
@@ -215,8 +221,8 @@
                     </div>
 
                     <!-- Card 2 -->
-                    <div
-                        class="bg-primary rounded-lg p-4 md:p-6 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-primary rounded-lg p-4 md:p-6 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-shadow duration-300"
+                        data-aos="fade-up" data-aos-delay="200">
                         <div
                             class="bg-white rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mb-3 md:mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="102" height="101"
@@ -274,8 +280,8 @@
                     </div>
 
                     <!-- Card 3 -->
-                    <div
-                        class="bg-primary rounded-lg p-4 md:p-6 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-primary rounded-lg p-4 md:p-6 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-shadow duration-300"
+                        data-aos="fade-up" data-aos-delay="300">
                         <div
                             class="bg-white rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mb-3 md:mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="102" height="101"
@@ -318,8 +324,8 @@
                     </div>
 
                     <!-- Card 4 -->
-                    <div
-                        class="bg-primary rounded-lg p-4 md:p-6 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-primary rounded-lg p-4 md:p-6 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-shadow duration-300"
+                        data-aos="fade-up" data-aos-delay="400">
                         <div
                             class="bg-white rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mb-3 md:mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="102" height="101"
@@ -404,16 +410,17 @@
         </div>
     </section>
 
-    <section class="bg-primary py-10 lg:py-24">
+    <section id="layanan" class="bg-primary py-10 lg:py-24">
         <div class="container mx-auto p-6">
             <div class="flex flex-col gap-5 justify-center items-center">
-                <div class="text-center text-2xl lg:text-3xl capitalize xl:text-4xl font-bold text-secondary">
+                <div class="text-center text-2xl lg:text-3xl capitalize xl:text-4xl font-bold text-secondary"
+                    data-aos="fade-up">
                     layanan kami
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 w-full max-w-7xl px-4 sm:px-0">
                     <!-- Card 1: Kitchen Set -->
-                    <div
-                        class="bg-secondary rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-secondary rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
+                        data-aos="fade-up" data-aos-delay="100">
                         <div class="relative">
                             <img src="{{ asset('img/general/kitchen-set.webp') }}" alt="Kitchen Set"
                                 class="w-full h-48 object-cover">
@@ -441,8 +448,8 @@
                     </div>
 
                     <!-- Card 2: Custom Furniture -->
-                    <div
-                        class="bg-secondary rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-secondary rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
+                        data-aos="fade-up" data-aos-delay="200">
                         <div class="relative">
                             <img src="{{ asset('img/general/custom-furniture.webp') }}" alt="Custom Furniture"
                                 class="w-full h-48 object-cover">
@@ -470,8 +477,8 @@
                     </div>
 
                     <!-- Card 3: Desain Interior -->
-                    <div
-                        class="bg-secondary rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-secondary rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
+                        data-aos="fade-up" data-aos-delay="300">
                         <div class="relative">
                             <img src="{{ asset('img/general/desain-interior.webp') }}" alt="Desain Interior"
                                 class="w-full h-48 object-cover">
@@ -499,8 +506,8 @@
                     </div>
 
                     <!-- Card 4: Workshop & Project -->
-                    <div
-                        class="bg-secondary rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-secondary rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
+                        data-aos="fade-up" data-aos-delay="400">
                         <div class="relative">
                             <img src="{{ asset('img/general/workshop.webp') }}" alt="Workshop & Project"
                                 class="w-full h-48 object-cover">
@@ -531,17 +538,18 @@
         </div>
     </section>
 
-    <section class="bg-secondary py-10 lg:py-24">
+    <section id="portofolio" class="bg-secondary py-10 lg:py-24">
         <div class="container mx-auto p-6">
-            <div class="text-center text-2xl lg:text-3xl mb-5 xl:text-4xl font-bold text-primary">
+            <div class="text-center text-2xl lg:text-3xl mb-5 xl:text-4xl font-bold text-primary" data-aos="fade-up">
                 Hasil Karya Interlife Furniture
             </div>
-            <div class="text-center text-primary text-lg">
+            <div class="text-center text-primary text-lg" data-aos="fade-up" data-aos-delay="100">
                 Beberapa proyek terbaik yang telah kami kerjakan
             </div>
 
             <!-- Filter Categories -->
-            <div class="flex flex-wrap justify-center gap-2 my-8" id="portfolio-filters">
+            <div class="flex flex-wrap justify-center gap-2 my-8" id="portfolio-filters" data-aos="fade-up"
+                data-aos-delay="200">
                 <button id="filter-all" data-filter="all"
                     class="bg-white capitalize hover:bg-primary hover:text-white text-primary font-medium py-2 px-4 rounded-full transition-all duration-300 active">
                     Semua
@@ -561,10 +569,11 @@
             </div>
 
             <!-- Portfolio Grid -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8" id="portfolio-grid">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8" id="portfolio-grid" data-aos="fade-up"
+                data-aos-delay="300">
                 <!-- Portfolio Item 1 -->
                 <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md flex flex-col md:flex-row"
-                    data-category="interior">
+                    data-category="interior" data-aos="fade-up" data-aos-delay="400">
                     <div class="relative md:w-1/3 lg:w-2/5">
                         <img src="{{ asset('img/portofolio/interior-master.webp') }}" alt="Interior Kamar"
                             class="w-full h-48 md:h-full object-cover">
@@ -1209,14 +1218,16 @@
         </div>
     </section>
 
-    <section class="bg-primary py-10 lg:py-24">
+    <section id="testimoni" class="bg-primary py-10 lg:py-24">
         <div class="container mx-auto p-6">
             <div class="flex flex-col justify-center item-center text-center">
-                <div class="text-white text-center text-2xl lg:text-3xl mb-5 xl:text-4xl font-bold">
+                <div class="text-white text-center text-2xl lg:text-3xl mb-5 xl:text-4xl font-bold"
+                    data-aos="fade-up">
                     Dipercaya oleh :
                 </div>
-                <div class="flex flex-wrap justify-center gap-4 mt-8">
-                    <div class="bg-white rounded-lg p-4 w-52 h-20 flex items-center justify-center">
+                <div class="flex flex-wrap justify-center gap-4 mt-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-white rounded-lg p-4 w-52 h-20 flex items-center justify-center" data-aos="fade-up"
+                        data-aos-delay="200">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8" viewBox="0 0 158 36" fill="none">
                             <path
                                 d="M45.4114 15.5697C45.4114 13.5035 45.4114 11.4374 45.4114 9.40453C45.4114 9.30455 45.4114 9.2379 45.4114 9.13793C45.378 8.90465 45.5113 8.838 45.7113 8.87133C45.7779 8.87133 45.8113 8.87133 45.8779 8.87133C49.2771 8.87133 52.6762 8.87133 56.0754 8.87133C56.5753 8.87133 56.5086 8.838 56.5086 9.30455C56.5086 10.0044 56.5086 10.7375 56.5086 11.4374C56.5086 11.7706 56.5419 11.7373 56.1754 11.7373C53.7759 11.7373 51.3765 11.7373 48.9438 11.7373C48.4106 11.7373 48.4773 11.6706 48.4773 12.2038C48.4773 13.3369 48.4773 14.4699 48.4773 15.5697C48.4773 15.9362 48.4773 15.9362 48.8438 15.9362C51.0433 15.9362 53.2094 15.9362 55.4089 15.9362C55.5089 15.9362 55.6088 15.9362 55.7088 15.9362C56.0087 15.9362 56.0087 15.9362 56.0421 16.2695C56.0421 17.036 56.0421 17.7691 56.0421 18.5356C56.0421 18.8355 56.0421 18.8355 55.7088 18.8355C53.476 18.8355 51.2432 18.8355 48.9771 18.8355C48.4106 18.8355 48.4773 18.7689 48.4773 19.3354C48.4773 19.9353 48.4773 20.5351 48.4773 21.135C48.4773 21.5682 48.5439 22.0014 48.7105 22.4013C49.1104 23.3344 49.9102 23.7343 50.8767 23.7676C51.9097 23.801 52.9428 23.7676 53.9759 23.7676C54.7757 23.7676 55.5755 23.7676 56.4086 23.7676C56.7419 23.7676 56.7419 23.7676 56.7419 24.0676C56.7419 24.834 56.7419 25.6005 56.7419 26.367C56.7419 26.5669 56.6752 26.6669 56.4753 26.6669C54.5757 26.6669 52.6762 26.6669 50.81 26.6669C49.8103 26.6669 48.8438 26.467 47.9441 26.0004C46.711 25.3672 46.0112 24.3342 45.678 23.0012C45.5113 22.3347 45.4447 21.6348 45.4447 20.935C45.4114 19.1688 45.4114 17.3692 45.4114 15.5697Z"
@@ -1253,7 +1264,8 @@
                                 fill="#002964" />
                         </svg>
                     </div>
-                    <div class="bg-white rounded-lg p-4 w-52 h-20 flex items-center justify-center">
+                    <div class="bg-white rounded-lg p-4 w-52 h-20 flex items-center justify-center" data-aos="fade-up"
+                        data-aos-delay="300">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5" viewBox="0 0 126 20" fill="none">
                             <path
                                 d="M21.1832 10.0789C21.1832 13.0142 21.1532 15.9496 21.2131 18.8849C21.2431 19.7535 20.9435 19.9632 20.1648 19.9033C19.1763 19.8434 18.1879 19.8434 17.1995 19.9033C16.5405 19.9332 16.3009 19.7535 16.3309 19.0646C16.3908 17.0279 16.3309 14.9911 16.3608 12.9543C16.3608 12.3253 16.1811 12.1456 15.5521 12.1456C12.437 12.1756 9.32198 12.1756 6.20692 12.1456C5.57792 12.1456 5.3982 12.3253 5.3982 12.9543C5.42815 14.9911 5.36825 17.0279 5.42815 19.0646C5.45811 19.7535 5.21849 19.9332 4.55953 19.9033C3.45129 19.8434 2.34305 19.8733 1.23481 19.9033C0.755566 19.9033 0.545898 19.7835 0.545898 19.2443C0.545898 13.0741 0.575851 6.90392 0.545898 0.733703C0.545898 0.164606 0.785518 0.104699 1.26476 0.104699C2.40295 0.134652 3.54115 0.134652 4.67934 0.104699C5.27839 0.0747466 5.42815 0.284416 5.42815 0.883466C5.3982 2.86033 5.45811 4.8372 5.3982 6.81406C5.36825 7.53292 5.60787 7.71264 6.29678 7.71264C9.35193 7.68269 12.4071 7.68269 15.4622 7.71264C16.1811 7.71264 16.3608 7.50297 16.3608 6.78411C16.3309 4.80724 16.3608 2.83038 16.3309 0.853511C16.3309 0.254462 16.5106 0.0747466 17.0797 0.104699C18.1879 0.134652 19.2962 0.164604 20.4044 0.104699C21.0634 0.0747466 21.2131 0.31437 21.2131 0.91342C21.1832 3.96857 21.1832 7.02373 21.1832 10.0789Z"
@@ -1445,38 +1457,41 @@
         </div>
     </section>
 
-    <section class="bg-primary py-10 lg:py-24">
+    <section id="kontak" class="bg-primary py-10 lg:py-24">
         <div class="container mx-auto p-6">
             <div class="flex flex-col justify-center item-center">
-                <div class="text-white text-center text-2xl lg:text-3xl mb-5 xl:text-4xl font-bold">
+                <div class="text-white text-center text-2xl lg:text-3xl mb-5 xl:text-4xl font-bold"
+                    data-aos="fade-up">
                     Siap Konsultasi? Hubungi Kami Sekarang!
                 </div>
-                <div class="text-center text-white text-lg font-light">
+                <div class="text-center text-white text-lg font-light" data-aos="fade-up" data-aos-delay="100">
                     Dapatkan konsultasi gratis untuk mewujudkan hunian impian Anda
                 </div>
 
-                <div class="mt-10 mb-10 bg-white rounded-lg shadow-xl overflow-hidden max-w-5xl md:mx-auto">
+                <div class="mt-10 mb-10 bg-white rounded-lg shadow-xl overflow-hidden max-w-5xl md:mx-auto"
+                    data-aos="fade-up" data-aos-delay="200">
                     <div class="flex flex-col md:flex-row">
                         <!-- Form Kirim Pesan - Menggunakan komponen Flowbite -->
                         <div class="w-full md:w-1/2 p-8 bg-gray-100">
                             <h3 class="text-xl font-semibold text-primary mb-6">Kirim Pesan</h3>
 
-                            <form action="{{ route('contact.send') }}" method="POST">  
+                            <form action="{{ route('contact.send') }}" method="POST">
                                 @csrf
-                                @if(session('success'))
-                                <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50" role="alert">
-                                    {{ session('success') }}
-                                </div>
+                                @if (session('success'))
+                                    <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50"
+                                        role="alert">
+                                        {{ session('success') }}
+                                    </div>
                                 @endif
-                                
+
                                 @if ($errors->any())
-                                <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert">
-                                    <ul class="list-disc pl-5">
-                                        @foreach ($errors->all() as $error)
-                                            <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
+                                    <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert">
+                                        <ul class="list-disc pl-5">
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
                                 @endif
                                 <div class="mb-4">
                                     <label for="nama" class="block mb-2 text-sm font-medium text-primary">Nama
@@ -1544,10 +1559,16 @@
                                         yang dibutuhkan</label>
                                     <select id="layanan" name="layanan"
                                         class="bg-white border border-[#E0E0E0 ] cursor-pointer text-[#9E9E9E] text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5">
-                                        <option value="" {{ old('layanan') == '' ? 'selected' : '' }}>Pilih layanan</option>
-                                        <option value="kitchen-set" {{ old('layanan') == 'kitchen-set' ? 'selected' : '' }}>Kitchen Set</option>
-                                        <option value="custom-furniture" {{ old('layanan') == 'custom-furniture' ? 'selected' : '' }}>Custom Furniture</option>
-                                        <option value="interior" {{ old('layanan') == 'interior' ? 'selected' : '' }}>Interior</option>
+                                        <option value="" {{ old('layanan') == '' ? 'selected' : '' }}>Pilih
+                                            layanan</option>
+                                        <option value="kitchen-set"
+                                            {{ old('layanan') == 'kitchen-set' ? 'selected' : '' }}>Kitchen Set
+                                        </option>
+                                        <option value="custom-furniture"
+                                            {{ old('layanan') == 'custom-furniture' ? 'selected' : '' }}>Custom
+                                            Furniture</option>
+                                        <option value="interior" {{ old('layanan') == 'interior' ? 'selected' : '' }}>
+                                            Interior</option>
                                     </select>
                                 </div>
 
@@ -1559,19 +1580,28 @@
                                         placeholder="Ceritakan kebutuhan Anda...">{{ old('pesan') }}</textarea>
                                 </div>
 
-                                <button type="submit"
-                                    class="w-full text-white bg-primary hover:bg-primary/90 cursor-pointer focus:ring-4 focus:outline-none focus:ring-[#7a8b66] font-medium rounded-lg text-sm px-5 py-3 text-center transition duration-300">Kirim
-                                    Pesan
+                                <button type="submit" id="submit-contact-form"
+                                    class="w-full text-white bg-primary hover:bg-primary/90 cursor-pointer focus:ring-4 focus:outline-none focus:ring-[#7a8b66] font-medium rounded-lg text-sm px-5 py-3 text-center transition duration-300 flex items-center justify-center">
+                                    <span id="button-text">Kirim Pesan</span>
+                                    <span id="loading-indicator" class="hidden ml-2">
+                                        <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                        </svg>
+                                    </span>
                                 </button>
                             </form>
                         </div>
 
                         <!-- Informasi Kontak -->
-                        <div class="w-full md:w-1/2 p-8 bg-secondary text-primary flex flex-col justify-between">
+                        <div class="w-full md:w-1/2 p-8 bg-secondary text-primary flex flex-col justify-between"
+                            data-aos="fade-left" data-aos-delay="300">
                             <div>
-                                <h3 class="text-xl font-semibold mb-6">Informasi Kontak</h3>
+                                <h3 class="text-xl font-semibold mb-6" data-aos="fade-up" data-aos-delay="400">
+                                    Informasi Kontak</h3>
 
-                                <div class="flex items-start text-xs md:text-base mb-6">
+                                <div class="flex items-start text-xs md:text-base mb-6" data-aos="fade-up"
+                                    data-aos-delay="500">
                                     <div class="mr-3 mt-1">
                                         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1645,13 +1675,14 @@
         </div>
     </section>
 
-    <footer class="bg-footer">
+    <footer class="bg-footer" data-aos="fade-up">
         <div class="container mx-auto p-6">
             <div class="flex flex-col md:flex-row md:justify-between justify-center items-center gap-5 md:gap-0">
-                <div class="flex items-center text-xs md:text-base text-white font-bold">
+                <div class="flex items-center text-xs md:text-base text-white font-bold" data-aos="fade-right"
+                    data-aos-delay="100">
                     Wujudkan Hunian Impian Anda!
                 </div>
-                <div>
+                <div data-aos="fade-left" data-aos-delay="200">
                     <a href="#"
                         class="inline-block text-xs md:text-base bg-secondary hover:bg-secondary/90 text-primary font-bold py-3 px-6 rounded-full transition-all duration-300">
                         Konsultasi
@@ -1662,7 +1693,56 @@
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop"
+        class="fixed bottom-6 cursor-pointer right-6 bg-primary hover:bg-primary/90 text-white p-3 rounded-full shadow-lg transition-all duration-300 opacity-0 invisible z-50"
+        onclick="scrollToTop()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18">
+            </path>
+        </svg>
+    </button>
+
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+    <!-- AOS JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Back to Top Script -->
+    <script>
+        // Back to Top functionality
+        const backToTopButton = document.getElementById('backToTop');
+
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        // Smooth scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <!-- AOS Initialization -->
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    </script>
 
     <!-- Filter Portfolio Script -->
     <script>
@@ -1707,6 +1787,22 @@
             const defaultButton = document.getElementById('filter-all');
             defaultButton.classList.add('active', 'bg-primary', 'text-white');
             defaultButton.classList.remove('bg-white', 'text-primary');
+            
+            // Contact form loading indicator
+            const contactForm = document.querySelector('form[action="{{ route('contact.send') }}"]');
+            const submitButton = document.getElementById('submit-contact-form');
+            const buttonText = document.getElementById('button-text');
+            const loadingIndicator = document.getElementById('loading-indicator');
+            
+            if (contactForm && submitButton) {
+                contactForm.addEventListener('submit', function() {
+                    // Show loading indicator
+                    buttonText.textContent = 'Mengirim...';
+                    loadingIndicator.classList.remove('hidden');
+                    submitButton.disabled = true;
+                    submitButton.classList.add('opacity-75');
+                });
+            }
         });
     </script>
 </body>
