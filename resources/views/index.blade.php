@@ -5,7 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Interlife Furniture</title>
+    <title>Interlife Furniture - Jasa Pembuatan Kitchen Set & Custom Furniture Berkualitas</title>
+
+    <!-- Meta Tags for SEO -->
+    <meta name="description"
+        content="Interlife Furniture menyediakan jasa pembuatan kitchen set, custom furniture, dan interior berkualitas tinggi dengan desain modern dan elegan. Wujudkan hunian impian Anda bersama kami.">
+    <meta name="keywords"
+        content="kitchen set, custom furniture, interior design, furniture custom, jasa interior, kitchen set murah, furniture jepara, furniture minimalis, furniture custom jakarta, kitchen set jakarta, interior rumah, desain interior, furniture berkualitas, jasa desain interior">
+    <meta name="author" content="Interlife Furniture">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Indonesia">
+    <meta name="revisit-after" content="7 days">
+    <meta name="geo.region" content="ID-JK">
+    <meta name="geo.placename" content="Jakarta">
+    <meta name="theme-color" content="#7a8b66">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Interlife Furniture - Jasa Pembuatan Kitchen Set & Custom Furniture">
+    <meta property="og:description"
+        content="Wujudkan hunian impian Anda dengan kitchen set dan custom furniture berkualitas tinggi dari Interlife Furniture. Desain modern, elegan, dan terpercaya.">
+    <meta property="og:image" content="{{ asset('img/general/bg-banner.webp') }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="{{ url('/') }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Interlife Furniture">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Interlife Furniture - Kitchen Set & Custom Furniture">
+    <meta name="twitter:description"
+        content="Jasa pembuatan kitchen set dan custom furniture berkualitas dengan desain modern dan elegan. Wujudkan hunian impian Anda bersama Interlife Furniture.">
+    <meta name="twitter:image" content="{{ asset('img/general/bg-banner.webp') }}">
+
+    <!-- Pinterest Meta Tags -->
+    <meta name="pinterest-rich-pin" content="true">
+    <meta name="pinterest:description"
+        content="Jasa pembuatan kitchen set dan custom furniture berkualitas dengan desain modern dan elegan. Wujudkan hunian impian Anda bersama Interlife Furniture.">
+    <meta name="pinterest:image" content="{{ asset('img/general/bg-banner.webp') }}">
+
+    <!-- Microsoft Bing Meta Tags -->
+    <meta name="msapplication-TileColor" content="#7a8b66">
+    <meta name="msapplication-TileImage" content="{{ asset('img/general/logo.png') }}">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ url('/') }}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ asset('img/general/logo.png') }}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,12 +114,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#testimoni"
-                                class="block py-2 px-3 text-white rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-secondary lg:p-0">
-                                testimoni
-                            </a>
-                        </li>
-                        <li>
                             <a href="#kontak"
                                 class="block py-2 px-3 text-white rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-secondary lg:p-0">
                                 kontak
@@ -124,8 +166,8 @@
                         data-aos="fade-up" data-aos-delay="100">
                         <div
                             class="bg-white rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mb-3 md:mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="102" height="101" viewBox="0 0 102 101"
-                                fill="none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="102" height="101"
+                                viewBox="0 0 102 101" fill="none">
                                 <path
                                     d="M51.5799 0.5H50.4199C22.8057 0.5 0.419922 22.8858 0.419922 50.5C0.419922 78.1142 22.8057 100.5 50.42 100.5H51.5799C79.1942 100.5 101.58 78.1142 101.58 50.5C101.58 22.8858 79.1941 0.5 51.5799 0.5Z"
                                     fill="white" />
@@ -1218,7 +1260,7 @@
         </div>
     </section>
 
-    <section id="testimoni" class="bg-primary py-10 lg:py-24">
+    <section class="bg-primary py-10 lg:py-24">
         <div class="container mx-auto p-6">
             <div class="flex flex-col justify-center item-center text-center">
                 <div class="text-white text-center text-2xl lg:text-3xl mb-5 xl:text-4xl font-bold"
@@ -1486,7 +1528,8 @@
                                     @endif
 
                                     @if ($errors->any())
-                                        <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert">
+                                        <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50"
+                                            role="alert">
                                             <ul class="list-disc pl-5">
                                                 @foreach ($errors->all() as $error)
                                                     <li>{{ $error }}</li>
@@ -1804,79 +1847,83 @@
             if (contactForm && submitButton) {
                 contactForm.addEventListener('submit', function(e) {
                     e.preventDefault(); // Prevent default form submission
-                    
+
                     // Show loading indicator
                     buttonText.textContent = 'Mengirim...';
                     loadingIndicator.classList.remove('hidden');
                     submitButton.disabled = true;
                     submitButton.classList.add('opacity-75');
-                    
+
                     // Get form data
                     const formData = new FormData(contactForm);
-                    
+
                     // Send AJAX request
                     fetch(contactForm.getAttribute('action'), {
-                        method: 'POST',
-                        body: formData,
-                        headers: {
-                            'X-Requested-With': 'XMLHttpRequest'
-                        }
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        // Reset loading state
-                        buttonText.textContent = 'Kirim Pesan';
-                        loadingIndicator.classList.add('hidden');
-                        submitButton.disabled = false;
-                        submitButton.classList.remove('opacity-75');
-                        
-                        // Show success message
-                        if (data.success) {
-                            formMessages.innerHTML = `
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'X-Requested-With': 'XMLHttpRequest'
+                            }
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            // Reset loading state
+                            buttonText.textContent = 'Kirim Pesan';
+                            loadingIndicator.classList.add('hidden');
+                            submitButton.disabled = false;
+                            submitButton.classList.remove('opacity-75');
+
+                            // Show success message
+                            if (data.success) {
+                                formMessages.innerHTML = `
                                 <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50" role="alert">
                                     ${data.success}
                                 </div>
                             `;
-                            contactForm.reset(); // Reset form fields
-                        } else if (data.errors) {
-                            // Show error messages
-                            let errorHtml = `
+                                contactForm.reset(); // Reset form fields
+                            } else if (data.errors) {
+                                // Show error messages
+                                let errorHtml = `
                                 <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert">
                                     <ul class="list-disc pl-5">
                             `;
-                            
-                            Object.values(data.errors).forEach(error => {
-                                errorHtml += `<li>${error}</li>`;
-                            });
-                            
-                            errorHtml += `
+
+                                Object.values(data.errors).forEach(error => {
+                                    errorHtml += `<li>${error}</li>`;
+                                });
+
+                                errorHtml += `
                                     </ul>
                                 </div>
                             `;
-                            
-                            formMessages.innerHTML = errorHtml;
-                        }
-                        
-                        // Scroll to form messages
-                        formMessages.scrollIntoView({ behavior: 'smooth' });
-                    })
-                    .catch(error => {
-                        // Reset loading state
-                        buttonText.textContent = 'Kirim Pesan';
-                        loadingIndicator.classList.add('hidden');
-                        submitButton.disabled = false;
-                        submitButton.classList.remove('opacity-75');
-                        
-                        // Show error message
-                        formMessages.innerHTML = `
+
+                                formMessages.innerHTML = errorHtml;
+                            }
+
+                            // Scroll to form messages
+                            formMessages.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        })
+                        .catch(error => {
+                            // Reset loading state
+                            buttonText.textContent = 'Kirim Pesan';
+                            loadingIndicator.classList.add('hidden');
+                            submitButton.disabled = false;
+                            submitButton.classList.remove('opacity-75');
+
+                            // Show error message
+                            formMessages.innerHTML = `
                             <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert">
                                 Terjadi kesalahan saat mengirim pesan. Silakan coba lagi.
                             </div>
                         `;
-                        
-                        // Scroll to form messages
-                        formMessages.scrollIntoView({ behavior: 'smooth' });
-                    });
+
+                            // Scroll to form messages
+                            formMessages.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        });
                 });
             }
         });
