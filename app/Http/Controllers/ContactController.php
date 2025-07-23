@@ -21,6 +21,12 @@ class ContactController extends Controller
         Mail::to('interlifefurniture@gmail.com')
             ->send(new ContactFormMail($validatedData));
 
+        // Jika request adalah AJAX, kembalikan respons JSON
+        if ($request->ajax() || $request->wantsJson() || $request->header('X-Requested-With') === 'XMLHttpRequest') {
+            return response()->json(['success' => 'Pesan Anda telah berhasil dikirim!']);
+        }
+        
+        // Jika bukan AJAX, lakukan redirect seperti biasa
         return redirect()->back()->with('success', 'Pesan Anda telah berhasil dikirim!');
     }
 }

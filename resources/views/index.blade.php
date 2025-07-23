@@ -1475,24 +1475,26 @@
                         <div class="w-full md:w-1/2 p-8 bg-gray-100">
                             <h3 class="text-xl font-semibold text-primary mb-6">Kirim Pesan</h3>
 
-                            <form action="{{ route('contact.send') }}" method="POST">
+                            <form id="contactForm" action="{{ route('contact.send') }}" method="POST">
                                 @csrf
-                                @if (session('success'))
-                                    <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50"
-                                        role="alert">
-                                        {{ session('success') }}
-                                    </div>
-                                @endif
+                                <div id="form-messages">
+                                    @if (session('success'))
+                                        <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50"
+                                            role="alert">
+                                            {{ session('success') }}
+                                        </div>
+                                    @endif
 
-                                @if ($errors->any())
-                                    <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert">
-                                        <ul class="list-disc pl-5">
-                                            @foreach ($errors->all() as $error)
-                                                <li>{{ $error }}</li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                @endif
+                                    @if ($errors->any())
+                                        <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert">
+                                            <ul class="list-disc pl-5">
+                                                @foreach ($errors->all() as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endif
+                                </div>
                                 <div class="mb-4">
                                     <label for="nama" class="block mb-2 text-sm font-medium text-primary">Nama
                                         Lengkap</label>
@@ -1792,19 +1794,89 @@
             defaultButton.classList.add('active', 'bg-primary', 'text-white');
             defaultButton.classList.remove('bg-white', 'text-primary');
 
-            // Contact form loading indicator
-            const contactForm = document.querySelector('form[action="{{ route('contact.send') }}"]');
+            // Contact form loading indicator and AJAX submission
+            const contactForm = document.getElementById('contactForm');
             const submitButton = document.getElementById('submit-contact-form');
             const buttonText = document.getElementById('button-text');
             const loadingIndicator = document.getElementById('loading-indicator');
+            const formMessages = document.getElementById('form-messages');
 
             if (contactForm && submitButton) {
-                contactForm.addEventListener('submit', function() {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault(); // Prevent default form submission
+                    
                     // Show loading indicator
                     buttonText.textContent = 'Mengirim...';
                     loadingIndicator.classList.remove('hidden');
                     submitButton.disabled = true;
                     submitButton.classList.add('opacity-75');
+                    
+                    // Get form data
+                    const formData = new FormData(contactForm);
+                    
+                    // Send AJAX request
+                    fetch(contactForm.getAttribute('action'), {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'X-Requested-With': 'XMLHttpRequest'
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        // Reset loading state
+                        buttonText.textContent = 'Kirim Pesan';
+                        loadingIndicator.classList.add('hidden');
+                        submitButton.disabled = false;
+                        submitButton.classList.remove('opacity-75');
+                        
+                        // Show success message
+                        if (data.success) {
+                            formMessages.innerHTML = `
+                                <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50" role="alert">
+                                    ${data.success}
+                                </div>
+                            `;
+                            contactForm.reset(); // Reset form fields
+                        } else if (data.errors) {
+                            // Show error messages
+                            let errorHtml = `
+                                <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert">
+                                    <ul class="list-disc pl-5">
+                            `;
+                            
+                            Object.values(data.errors).forEach(error => {
+                                errorHtml += `<li>${error}</li>`;
+                            });
+                            
+                            errorHtml += `
+                                    </ul>
+                                </div>
+                            `;
+                            
+                            formMessages.innerHTML = errorHtml;
+                        }
+                        
+                        // Scroll to form messages
+                        formMessages.scrollIntoView({ behavior: 'smooth' });
+                    })
+                    .catch(error => {
+                        // Reset loading state
+                        buttonText.textContent = 'Kirim Pesan';
+                        loadingIndicator.classList.add('hidden');
+                        submitButton.disabled = false;
+                        submitButton.classList.remove('opacity-75');
+                        
+                        // Show error message
+                        formMessages.innerHTML = `
+                            <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert">
+                                Terjadi kesalahan saat mengirim pesan. Silakan coba lagi.
+                            </div>
+                        `;
+                        
+                        // Scroll to form messages
+                        formMessages.scrollIntoView({ behavior: 'smooth' });
+                    });
                 });
             }
         });
