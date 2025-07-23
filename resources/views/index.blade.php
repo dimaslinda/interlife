@@ -98,11 +98,11 @@
             </p>
             <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0" data-aos="fade-up"
                 data-aos-delay="600">
-                <a href="#"
+                <a href="https://wa.me/+6285770622336" target="_blank"
                     class="inline-flex justify-center capitalize items-center py-3 px-5 text-base font-medium text-center text-[#575A4A] rounded-full bg-[#D9D7CB] hover:bg-[#D9D7CB]/95">
                     konsultasi gratis sekarang
                 </a>
-                <a href="#"
+                <a href="#portofolio"
                     class="inline-flex justify-center capitalize hover:text-[#9E9E9E] items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-[#EDEDEA] rounded-full border border-[#EDEDEA] hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
                     lihat portofolio
                 </a>
@@ -434,7 +434,7 @@
                                 luxury
                             </p>
                             <div class="flex justify-center">
-                                <a href="#"
+                                <a href="https://wa.me/+6285770622336" target="_blank"
                                     class="inline-flex items-center justify-center px-4 py-2 bg-[#D9D7CB] text-primary rounded-full text-sm font-medium hover:bg-[#D9D7CB]/95 transition-colors">
                                     Konsultasikan
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none"
@@ -463,7 +463,7 @@
                                 storage sesuai request
                             </p>
                             <div class="flex justify-center">
-                                <a href="#"
+                                <a href="https://wa.me/+6285770622336" target="_blank"
                                     class="inline-flex items-center justify-center px-4 py-2 bg-[#D9D7CB] text-primary rounded-full text-sm font-medium hover:bg-[#D9D7CB]/95 transition-colors">
                                     Konsultasikan
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none"
@@ -492,7 +492,7 @@
                                 komersial
                             </p>
                             <div class="flex justify-center">
-                                <a href="#"
+                                <a href="https://wa.me/+6285770622336" target="_blank"
                                     class="inline-flex items-center justify-center px-4 py-2 bg-[#D9D7CB] text-primary rounded-full text-sm font-medium hover:bg-[#D9D7CB]/95 transition-colors">
                                     Konsultasikan
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none"
@@ -521,7 +521,7 @@
                                 selesai/pasang
                             </p>
                             <div class="flex justify-center">
-                                <a href="#"
+                                <a href="https://wa.me/+6285770622336" target="_blank"
                                     class="inline-flex items-center justify-center px-4 py-2 bg-[#D9D7CB] text-primary rounded-full text-sm font-medium hover:bg-[#D9D7CB]/95 transition-colors">
                                     Konsultasikan
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none"
@@ -551,19 +551,19 @@
             <div class="flex flex-wrap justify-center gap-2 my-8" id="portfolio-filters" data-aos="fade-up"
                 data-aos-delay="200">
                 <button id="filter-all" data-filter="all"
-                    class="bg-white capitalize hover:bg-primary hover:text-white text-primary font-medium py-2 px-4 rounded-full transition-all duration-300 active">
+                    class="bg-white capitalize cursor-pointer hover:bg-primary hover:text-white text-primary font-medium py-2 px-4 rounded-full transition-all duration-300 active">
                     Semua
                 </button>
                 <button id="filter-kitchen" data-filter="kitchen set"
-                    class="bg-white capitalize hover:bg-primary hover:text-white text-primary font-medium py-2 px-4 rounded-full transition-all duration-300">
+                    class="bg-white capitalize cursor-pointer hover:bg-primary hover:text-white text-primary font-medium py-2 px-4 rounded-full transition-all duration-300">
                     kitchen set
                 </button>
                 <button id="filter-furniture" data-filter="custom furniture"
-                    class="bg-white capitalize hover:bg-primary hover:text-white text-primary font-medium py-2 px-4 rounded-full transition-all duration-300">
+                    class="bg-white capitalize cursor-pointer hover:bg-primary hover:text-white text-primary font-medium py-2 px-4 rounded-full transition-all duration-300">
                     custom furniture
                 </button>
                 <button id="filter-interior" data-filter="interior"
-                    class="bg-white capitalize hover:bg-primary hover:text-white text-primary font-medium py-2 px-4 rounded-full transition-all duration-300">
+                    class="bg-white capitalize cursor-pointer hover:bg-primary hover:text-white text-primary font-medium py-2 px-4 rounded-full transition-all duration-300">
                     interior
                 </button>
             </div>
@@ -1446,7 +1446,7 @@
                     </div>
 
                     <div class="mt-8 flex justify-center">
-                        <a href="#"
+                        <a href="https://wa.me/+6285770622336" target="_blank"
                             class="inline-block bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition-all duration-300">
                             Konsultasi
                             Gratis Sekarang
@@ -1584,9 +1584,13 @@
                                     class="w-full text-white bg-primary hover:bg-primary/90 cursor-pointer focus:ring-4 focus:outline-none focus:ring-[#7a8b66] font-medium rounded-lg text-sm px-5 py-3 text-center transition duration-300 flex items-center justify-center">
                                     <span id="button-text">Kirim Pesan</span>
                                     <span id="loading-indicator" class="hidden ml-2">
-                                        <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                        <svg class="animate-spin h-5 w-5 text-white"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <circle class="opacity-25" cx="12" cy="12" r="10"
+                                                stroke="currentColor" stroke-width="4"></circle>
+                                            <path class="opacity-75" fill="currentColor"
+                                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                                            </path>
                                         </svg>
                                     </span>
                                 </button>
@@ -1683,7 +1687,7 @@
                     Wujudkan Hunian Impian Anda!
                 </div>
                 <div data-aos="fade-left" data-aos-delay="200">
-                    <a href="#"
+                    <a href="https://wa.me/+6285770622336" target="_blank"
                         class="inline-block text-xs md:text-base bg-secondary hover:bg-secondary/90 text-primary font-bold py-3 px-6 rounded-full transition-all duration-300">
                         Konsultasi
                         Gratis Sekarang
@@ -1787,13 +1791,13 @@
             const defaultButton = document.getElementById('filter-all');
             defaultButton.classList.add('active', 'bg-primary', 'text-white');
             defaultButton.classList.remove('bg-white', 'text-primary');
-            
+
             // Contact form loading indicator
             const contactForm = document.querySelector('form[action="{{ route('contact.send') }}"]');
             const submitButton = document.getElementById('submit-contact-form');
             const buttonText = document.getElementById('button-text');
             const loadingIndicator = document.getElementById('loading-indicator');
-            
+
             if (contactForm && submitButton) {
                 contactForm.addEventListener('submit', function() {
                     // Show loading indicator
