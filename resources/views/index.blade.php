@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Interlife Furniture</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -541,224 +541,713 @@
             </div>
 
             <!-- Filter Categories -->
-            <div class="flex flex-wrap justify-center gap-2 my-8">
-                <button class="bg-white hover:bg-primary hover:text-white text-primary font-medium py-2 px-4 rounded-full transition-all duration-300 active">
+            <div class="flex flex-wrap justify-center gap-2 my-8" id="portfolio-filters">
+                <button id="filter-all" data-filter="all"
+                    class="bg-white capitalize hover:bg-primary hover:text-white text-primary font-medium py-2 px-4 rounded-full transition-all duration-300 active">
                     Semua
                 </button>
-                <button class="bg-white hover:bg-primary hover:text-white text-primary font-medium py-2 px-4 rounded-full transition-all duration-300">
-                    Interior Kamar
+                <button id="filter-kitchen" data-filter="kitchen set"
+                    class="bg-white capitalize hover:bg-primary hover:text-white text-primary font-medium py-2 px-4 rounded-full transition-all duration-300">
+                    kitchen set
                 </button>
-                <button class="bg-white hover:bg-primary hover:text-white text-primary font-medium py-2 px-4 rounded-full transition-all duration-300">
-                    Bathroom
+                <button id="filter-furniture" data-filter="custom furniture"
+                    class="bg-white capitalize hover:bg-primary hover:text-white text-primary font-medium py-2 px-4 rounded-full transition-all duration-300">
+                    custom furniture
                 </button>
-                <button class="bg-white hover:bg-primary hover:text-white text-primary font-medium py-2 px-4 rounded-full transition-all duration-300">
-                    Wardrobe
-                </button>
-                <button class="bg-white hover:bg-primary hover:text-white text-primary font-medium py-2 px-4 rounded-full transition-all duration-300">
-                    Kitchen Set
-                </button>
-                <button class="bg-white hover:bg-primary hover:text-white text-primary font-medium py-2 px-4 rounded-full transition-all duration-300">
-                    Office
+                <button id="filter-interior" data-filter="interior"
+                    class="bg-white capitalize hover:bg-primary hover:text-white text-primary font-medium py-2 px-4 rounded-full transition-all duration-300">
+                    interior
                 </button>
             </div>
 
             <!-- Portfolio Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8" id="portfolio-grid">
                 <!-- Portfolio Item 1 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="relative">
-                        <img src="/img/general/interior-1.jpg" alt="Interior Kamar" class="w-full h-64 object-cover">
+                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md flex flex-col md:flex-row" data-category="interior">
+                    <div class="relative md:w-1/3 lg:w-2/5">
+                        <img src="{{ asset('img/portofolio/interior-master.webp') }}" alt="Interior Kamar"
+                            class="w-full h-48 md:h-full object-cover">
                         <div class="absolute top-3 left-3 bg-white text-primary text-xs font-medium px-2 py-1 rounded">
-                            Interior Kamar
+                            Interior
                         </div>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-primary">Interior Kamar Minimalis</h3>
-                        <p class="text-sm text-gray-600 mt-1">Lokasi: Jakarta Barat</p>
-                        <div class="flex items-center mt-2">
-                            <div class="flex text-yellow-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
+                    <div class="p-4 md:w-2/3 lg:w-3/5 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-primary text-xl mb-2">Interior Master Bedroom</h3>
+                            <ul class="list-disc list-inside mb-10">
+                                <li class="text-primary font-light capitalize mb-2">
+                                    Gaya Desain :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        modern glam
+                                    </span>
+                                </li>
+                                <li class="text-primary font-light capitalize mb-2">
+                                    rangka :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        plywood
+                                    </span>
+                                </li>
+                                <li class="text-primary font-light capitalize mb-2">
+                                    finishing :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        HPL, wpc, cermin, list gold
+                                    </span>
+                                </li>
+                            </ul>
+                            <div class="flex items-center mb-3">
+                                <div class="flex text-yellow-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M10.5734 4.39058C11.0224 3.00861 12.9776 3.00861 13.4266 4.39058L14.3574 7.25532C14.5582 7.87336 15.1341 8.2918 15.784 8.2918H18.7962C20.2492 8.2918 20.8534 10.1512 19.6778 11.0053L17.2409 12.7758C16.7152 13.1578 16.4952 13.8348 16.696 14.4529L17.6268 17.3176C18.0759 18.6996 16.4941 19.8488 15.3186 18.9947L12.8817 17.2242C12.3559 16.8422 11.6441 16.8422 11.1183 17.2242L8.68143 18.9947C7.50586 19.8488 5.92413 18.6996 6.37316 17.3176L7.30397 14.4529C7.50479 13.8348 7.2848 13.1578 6.75907 12.7758L4.32217 11.0053C3.1466 10.1512 3.75076 8.2918 5.20385 8.2918H8.21602C8.86586 8.2918 9.44179 7.87336 9.6426 7.25532L10.5734 4.39058Z"
+                                            fill="#FFC400" />
+                                        <mask id="mask0_194_2578" style="mask-type:alpha" maskUnits="userSpaceOnUse"
+                                            x="3" y="3" width="18" height="17">
+                                            <path
+                                                d="M13.4266 4.39058C12.9776 3.00861 11.0224 3.00861 10.5734 4.39058L9.6426 7.25532C9.44179 7.87336 8.86586 8.2918 8.21602 8.2918H5.20385C3.75076 8.2918 3.1466 10.1512 4.32217 11.0053L6.75907 12.7758C7.2848 13.1578 7.50479 13.8348 7.30397 14.4529L6.37316 17.3176C5.92414 18.6996 7.50585 19.8488 8.68143 18.9947L11.1183 17.2242C11.6441 16.8422 12.3559 16.8422 12.8817 17.2242L15.3186 18.9947C16.4941 19.8488 18.0759 18.6996 17.6268 17.3176L16.696 14.4529C16.4952 13.8348 16.7152 13.1578 17.2409 12.7758L19.6778 11.0053C20.8534 10.1512 20.2492 8.2918 18.7962 8.2918H15.784C15.1341 8.2918 14.5582 7.87336 14.3574 7.25532L13.4266 4.39058Z"
+                                                fill="#FFC400" />
+                                        </mask>
+                                        <g mask="url(#mask0_194_2578)">
+                                            <rect width="8.25" height="16.5" transform="matrix(-1 0 0 1 20.25 3)"
+                                                fill="#D9D9D9" />
+                                        </g>
+                                    </svg>
+                                </div>
                             </div>
-                            <p class="text-xs text-gray-600 ml-2">5.0 (12 reviews)</p>
+                            <p class="text-sm text-gray-600 leading-relaxed italic">
+                                “Keren, hasil melebihi ekspektasi. Detail rapih meskipun agak meleset dari waktu yang
+                                dijanjikan”
+                            </p>
                         </div>
-                        <p class="text-xs text-gray-600 mt-2">Desain kamar minimalis dengan sentuhan modern, cocok untuk ruangan berukuran sedang</p>
                     </div>
                 </div>
 
                 <!-- Portfolio Item 2 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="relative">
-                        <img src="/img/general/interior-2.jpg" alt="Interior Kamar" class="w-full h-64 object-cover">
+                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md flex flex-col md:flex-row" data-category="interior">
+                    <div class="relative md:w-1/3 lg:w-2/5">
+                        <img src="{{ asset('img/portofolio/interior-kids.webp') }}" alt="Interior Kamar"
+                            class="w-full h-48 md:h-full object-cover">
                         <div class="absolute top-3 left-3 bg-white text-primary text-xs font-medium px-2 py-1 rounded">
-                            Interior Kamar
+                            Interior
                         </div>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-primary">Interior Kids Bedroom</h3>
-                        <p class="text-sm text-gray-600 mt-1">Lokasi: BSD, Tangerang</p>
-                        <div class="flex items-center mt-2">
-                            <div class="flex text-yellow-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
+                    <div class="p-4 md:w-2/3 lg:w-3/5 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-primary text-xl mb-2">Interior Kids Bedroom</h3>
+                            <ul class="list-disc list-inside mb-10">
+                                <li class="text-primary font-light capitalize mb-2">
+                                    Gaya Desain :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        modern fun
+                                    </span>
+                                </li>
+                                <li class="text-primary font-light capitalize mb-2">
+                                    rangka :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        plywood
+                                    </span>
+                                </li>
+                                <li class="text-primary font-light capitalize mb-2">
+                                    finishing :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        HPL, cermin, list T
+                                    </span>
+                                </li>
+                            </ul>
+                            <div class="flex items-center mb-3">
+                                <div class="flex text-yellow-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M10.5734 4.39058C11.0224 3.00861 12.9776 3.00861 13.4266 4.39058L14.3574 7.25532C14.5582 7.87336 15.1341 8.2918 15.784 8.2918H18.7962C20.2492 8.2918 20.8534 10.1512 19.6778 11.0053L17.2409 12.7758C16.7152 13.1578 16.4952 13.8348 16.696 14.4529L17.6268 17.3176C18.0759 18.6996 16.4941 19.8488 15.3186 18.9947L12.8817 17.2242C12.3559 16.8422 11.6441 16.8422 11.1183 17.2242L8.68143 18.9947C7.50586 19.8488 5.92413 18.6996 6.37316 17.3176L7.30397 14.4529C7.50479 13.8348 7.2848 13.1578 6.75907 12.7758L4.32217 11.0053C3.1466 10.1512 3.75076 8.2918 5.20385 8.2918H8.21602C8.86586 8.2918 9.44179 7.87336 9.6426 7.25532L10.5734 4.39058Z"
+                                            fill="#FFC400" />
+                                        <mask id="mask0_194_2578" style="mask-type:alpha" maskUnits="userSpaceOnUse"
+                                            x="3" y="3" width="18" height="17">
+                                            <path
+                                                d="M13.4266 4.39058C12.9776 3.00861 11.0224 3.00861 10.5734 4.39058L9.6426 7.25532C9.44179 7.87336 8.86586 8.2918 8.21602 8.2918H5.20385C3.75076 8.2918 3.1466 10.1512 4.32217 11.0053L6.75907 12.7758C7.2848 13.1578 7.50479 13.8348 7.30397 14.4529L6.37316 17.3176C5.92414 18.6996 7.50585 19.8488 8.68143 18.9947L11.1183 17.2242C11.6441 16.8422 12.3559 16.8422 12.8817 17.2242L15.3186 18.9947C16.4941 19.8488 18.0759 18.6996 17.6268 17.3176L16.696 14.4529C16.4952 13.8348 16.7152 13.1578 17.2409 12.7758L19.6778 11.0053C20.8534 10.1512 20.2492 8.2918 18.7962 8.2918H15.784C15.1341 8.2918 14.5582 7.87336 14.3574 7.25532L13.4266 4.39058Z"
+                                                fill="#FFC400" />
+                                        </mask>
+                                        <g mask="url(#mask0_194_2578)">
+                                            <rect width="8.25" height="16.5" transform="matrix(-1 0 0 1 20.25 3)"
+                                                fill="#D9D9D9" />
+                                        </g>
+                                    </svg>
+                                </div>
                             </div>
-                            <p class="text-xs text-gray-600 ml-2">5.0 (8 reviews)</p>
+                            <p class="text-sm text-gray-600 leading-relaxed italic">
+                                “Awalnya ragu bisa bagus karena ruangannya sempit, ternyata setelah di desain hasil
+                                memuaskan”
+                            </p>
                         </div>
-                        <p class="text-xs text-gray-600 mt-2">Desain kamar anak dengan tema ceria, dilengkapi dengan storage yang fungsional</p>
                     </div>
                 </div>
 
                 <!-- Portfolio Item 3 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="relative">
-                        <img src="/img/general/bathroom-1.jpg" alt="Bathroom" class="w-full h-64 object-cover">
+                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md flex flex-col md:flex-row" data-category="custom furniture">
+                    <div class="relative md:w-1/3 lg:w-2/5">
+                        <img src="{{ asset('img/portofolio/wardrobe-modern.webp') }}" alt="Wardrobe Modern"
+                            class="w-full h-48 md:h-full object-cover">
                         <div class="absolute top-3 left-3 bg-white text-primary text-xs font-medium px-2 py-1 rounded">
-                            Bathroom
+                            custom furniture
                         </div>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-primary">Bathroom Modern</h3>
-                        <p class="text-sm text-gray-600 mt-1">Lokasi: Kemang, Jakarta Selatan</p>
-                        <div class="flex items-center mt-2">
-                            <div class="flex text-yellow-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
+                    <div class="p-4 md:w-2/3 lg:w-3/5 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-primary text-xl mb-2">Wardrobe Modern</h3>
+                            <ul class="list-disc list-inside mb-10">
+                                <li class="text-primary font-light capitalize mb-2">
+                                    Gaya Desain :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        modern kontemporer
+                                    </span>
+                                </li>
+                                <li class="text-primary font-light capitalize mb-2">
+                                    rangka :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        plywood, alumunium
+                                    </span>
+                                </li>
+                                <li class="text-primary font-light capitalize mb-2">
+                                    finishing :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        HPL, cermin, kaca bronze
+                                    </span>
+                                </li>
+                            </ul>
+                            <div class="flex items-center mb-3">
+                                <div class="flex text-yellow-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M10.5734 4.39058C11.0224 3.00861 12.9776 3.00861 13.4266 4.39058L14.3574 7.25532C14.5582 7.87336 15.1341 8.2918 15.784 8.2918H18.7962C20.2492 8.2918 20.8534 10.1512 19.6778 11.0053L17.2409 12.7758C16.7152 13.1578 16.4952 13.8348 16.696 14.4529L17.6268 17.3176C18.0759 18.6996 16.4941 19.8488 15.3186 18.9947L12.8817 17.2242C12.3559 16.8422 11.6441 16.8422 11.1183 17.2242L8.68143 18.9947C7.50586 19.8488 5.92413 18.6996 6.37316 17.3176L7.30397 14.4529C7.50479 13.8348 7.2848 13.1578 6.75907 12.7758L4.32217 11.0053C3.1466 10.1512 3.75076 8.2918 5.20385 8.2918H8.21602C8.86586 8.2918 9.44179 7.87336 9.6426 7.25532L10.5734 4.39058Z"
+                                            fill="#FFC400" />
+                                        <mask id="mask0_194_2578" style="mask-type:alpha" maskUnits="userSpaceOnUse"
+                                            x="3" y="3" width="18" height="17">
+                                            <path
+                                                d="M13.4266 4.39058C12.9776 3.00861 11.0224 3.00861 10.5734 4.39058L9.6426 7.25532C9.44179 7.87336 8.86586 8.2918 8.21602 8.2918H5.20385C3.75076 8.2918 3.1466 10.1512 4.32217 11.0053L6.75907 12.7758C7.2848 13.1578 7.50479 13.8348 7.30397 14.4529L6.37316 17.3176C5.92414 18.6996 7.50585 19.8488 8.68143 18.9947L11.1183 17.2242C11.6441 16.8422 12.3559 16.8422 12.8817 17.2242L15.3186 18.9947C16.4941 19.8488 18.0759 18.6996 17.6268 17.3176L16.696 14.4529C16.4952 13.8348 16.7152 13.1578 17.2409 12.7758L19.6778 11.0053C20.8534 10.1512 20.2492 8.2918 18.7962 8.2918H15.784C15.1341 8.2918 14.5582 7.87336 14.3574 7.25532L13.4266 4.39058Z"
+                                                fill="#FFC400" />
+                                        </mask>
+                                        <g mask="url(#mask0_194_2578)">
+                                            <rect width="8.25" height="16.5" transform="matrix(-1 0 0 1 20.25 3)"
+                                                fill="#D9D9D9" />
+                                        </g>
+                                    </svg>
+                                </div>
                             </div>
-                            <p class="text-xs text-gray-600 ml-2">5.0 (15 reviews)</p>
+                            <p class="text-sm text-gray-600 leading-relaxed italic">
+                                “Puas banget, mintanya agak ribet dan pake laci rahasia segala disanggupin”
+                            </p>
                         </div>
-                        <p class="text-xs text-gray-600 mt-2">Desain bathroom modern dengan aksen hitam dan putih, dilengkapi dengan shower box</p>
                     </div>
                 </div>
 
                 <!-- Portfolio Item 4 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="relative">
-                        <img src="/img/general/kitchen-1.jpg" alt="Kitchen Set" class="w-full h-64 object-cover">
+                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md flex flex-col md:flex-row" data-category="custom furniture">
+                    <div class="relative md:w-1/3 lg:w-2/5">
+                        <img src="{{ asset('img/portofolio/wardrobe-scandinavian.webp') }}" alt="Interior"
+                            class="w-full h-48 md:h-full object-cover">
                         <div class="absolute top-3 left-3 bg-white text-primary text-xs font-medium px-2 py-1 rounded">
-                            Kitchen Set
+                            custom furniture
                         </div>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-primary">Kitchen Set Scandinavian</h3>
-                        <p class="text-sm text-gray-600 mt-1">Lokasi: Serpong, Tangerang</p>
-                        <div class="flex items-center mt-2">
-                            <div class="flex text-yellow-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
+                    <div class="p-4 md:w-2/3 lg:w-3/5 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-primary text-xl mb-2">Wardrobe Scandinavian</h3>
+                            <ul class="list-disc list-inside mb-10">
+                                <li class="text-primary font-light capitalize mb-2">
+                                    Gaya Desain :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        Scandinavian Minimalist
+                                    </span>
+                                </li>
+                                <li class="text-primary font-light capitalize mb-2">
+                                    rangka :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        plywood
+                                    </span>
+                                </li>
+                                <li class="text-primary font-light capitalize mb-2">
+                                    finishing :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        HPL, Melaminto
+                                    </span>
+                                </li>
+                            </ul>
+                            <div class="flex items-center mb-3">
+                                <div class="flex text-yellow-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M10.5734 4.39058C11.0224 3.00861 12.9776 3.00861 13.4266 4.39058L14.3574 7.25532C14.5582 7.87336 15.1341 8.2918 15.784 8.2918H18.7962C20.2492 8.2918 20.8534 10.1512 19.6778 11.0053L17.2409 12.7758C16.7152 13.1578 16.4952 13.8348 16.696 14.4529L17.6268 17.3176C18.0759 18.6996 16.4941 19.8488 15.3186 18.9947L12.8817 17.2242C12.3559 16.8422 11.6441 16.8422 11.1183 17.2242L8.68143 18.9947C7.50586 19.8488 5.92413 18.6996 6.37316 17.3176L7.30397 14.4529C7.50479 13.8348 7.2848 13.1578 6.75907 12.7758L4.32217 11.0053C3.1466 10.1512 3.75076 8.2918 5.20385 8.2918H8.21602C8.86586 8.2918 9.44179 7.87336 9.6426 7.25532L10.5734 4.39058Z"
+                                            fill="#FFC400" />
+                                        <mask id="mask0_194_2578" style="mask-type:alpha" maskUnits="userSpaceOnUse"
+                                            x="3" y="3" width="18" height="17">
+                                            <path
+                                                d="M13.4266 4.39058C12.9776 3.00861 11.0224 3.00861 10.5734 4.39058L9.6426 7.25532C9.44179 7.87336 8.86586 8.2918 8.21602 8.2918H5.20385C3.75076 8.2918 3.1466 10.1512 4.32217 11.0053L6.75907 12.7758C7.2848 13.1578 7.50479 13.8348 7.30397 14.4529L6.37316 17.3176C5.92414 18.6996 7.50585 19.8488 8.68143 18.9947L11.1183 17.2242C11.6441 16.8422 12.3559 16.8422 12.8817 17.2242L15.3186 18.9947C16.4941 19.8488 18.0759 18.6996 17.6268 17.3176L16.696 14.4529C16.4952 13.8348 16.7152 13.1578 17.2409 12.7758L19.6778 11.0053C20.8534 10.1512 20.2492 8.2918 18.7962 8.2918H15.784C15.1341 8.2918 14.5582 7.87336 14.3574 7.25532L13.4266 4.39058Z"
+                                                fill="#FFC400" />
+                                        </mask>
+                                        <g mask="url(#mask0_194_2578)">
+                                            <rect width="8.25" height="16.5" transform="matrix(-1 0 0 1 20.25 3)"
+                                                fill="#D9D9D9" />
+                                        </g>
+                                    </svg>
+                                </div>
                             </div>
-                            <p class="text-xs text-gray-600 ml-2">5.0 (10 reviews)</p>
+                            <p class="text-sm text-gray-600 leading-relaxed italic">
+                                “Bagus, sesuai referensi yang saya inginkan. Meskipun ada ac menghalangi namun tetep
+                                masih rapih”
+                            </p>
                         </div>
-                        <p class="text-xs text-gray-600 mt-2">Kitchen set dengan gaya scandinavian, menggunakan material HPL dan granit untuk countertop</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md flex flex-col md:flex-row" data-category="interior">
+                    <div class="relative md:w-1/3 lg:w-2/5">
+                        <img src="{{ asset('img/portofolio/interior-office2.webp') }}" alt="Interior Office"
+                            class="w-full h-48 md:h-full object-cover">
+                        <div class="absolute top-3 left-3 bg-white text-primary text-xs font-medium px-2 py-1 rounded">
+                            Interior
+                        </div>
+                    </div>
+                    <div class="p-4 md:w-2/3 lg:w-3/5 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-primary text-xl mb-2">Interior Office</h3>
+                            <ul class="list-disc list-inside mb-10">
+                                <li class="text-primary font-light capitalize mb-2">
+                                    Gaya Desain :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        Scandinavian Minimalist
+                                    </span>
+                                </li>
+                                <li class="text-primary font-light capitalize mb-2">
+                                    rangka :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        plywood
+                                    </span>
+                                </li>
+                                <li class="text-primary font-light capitalize mb-2">
+                                    finishing :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        HPL, Wpc
+                                    </span>
+                                </li>
+                            </ul>
+                            <div class="flex items-center mb-3">
+                                <div class="flex text-yellow-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M10.5734 4.39058C11.0224 3.00861 12.9776 3.00861 13.4266 4.39058L14.3574 7.25532C14.5582 7.87336 15.1341 8.2918 15.784 8.2918H18.7962C20.2492 8.2918 20.8534 10.1512 19.6778 11.0053L17.2409 12.7758C16.7152 13.1578 16.4952 13.8348 16.696 14.4529L17.6268 17.3176C18.0759 18.6996 16.4941 19.8488 15.3186 18.9947L12.8817 17.2242C12.3559 16.8422 11.6441 16.8422 11.1183 17.2242L8.68143 18.9947C7.50586 19.8488 5.92413 18.6996 6.37316 17.3176L7.30397 14.4529C7.50479 13.8348 7.2848 13.1578 6.75907 12.7758L4.32217 11.0053C3.1466 10.1512 3.75076 8.2918 5.20385 8.2918H8.21602C8.86586 8.2918 9.44179 7.87336 9.6426 7.25532L10.5734 4.39058Z"
+                                            fill="#FFC400" />
+                                        <mask id="mask0_194_2578" style="mask-type:alpha" maskUnits="userSpaceOnUse"
+                                            x="3" y="3" width="18" height="17">
+                                            <path
+                                                d="M13.4266 4.39058C12.9776 3.00861 11.0224 3.00861 10.5734 4.39058L9.6426 7.25532C9.44179 7.87336 8.86586 8.2918 8.21602 8.2918H5.20385C3.75076 8.2918 3.1466 10.1512 4.32217 11.0053L6.75907 12.7758C7.2848 13.1578 7.50479 13.8348 7.30397 14.4529L6.37316 17.3176C5.92414 18.6996 7.50585 19.8488 8.68143 18.9947L11.1183 17.2242C11.6441 16.8422 12.3559 16.8422 12.8817 17.2242L15.3186 18.9947C16.4941 19.8488 18.0759 18.6996 17.6268 17.3176L16.696 14.4529C16.4952 13.8348 16.7152 13.1578 17.2409 12.7758L19.6778 11.0053C20.8534 10.1512 20.2492 8.2918 18.7962 8.2918H15.784C15.1341 8.2918 14.5582 7.87336 14.3574 7.25532L13.4266 4.39058Z"
+                                                fill="#FFC400" />
+                                        </mask>
+                                        <g mask="url(#mask0_194_2578)">
+                                            <rect width="8.25" height="16.5" transform="matrix(-1 0 0 1 20.25 3)"
+                                                fill="#D9D9D9" />
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-relaxed italic">
+                                “WFH jadi tetep nyaman dan pede buat online meet”
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md flex flex-col md:flex-row" data-category="kitchen set">
+                    <div class="relative md:w-1/3 lg:w-2/5">
+                        <img src="{{ asset('img/portofolio/kitchen-set.webp') }}" alt="kitchen set"
+                            class="w-full h-48 md:h-full object-cover">
+                        <div class="absolute top-3 left-3 bg-white text-primary text-xs font-medium px-2 py-1 rounded">
+                            kitchen set
+                        </div>
+                    </div>
+                    <div class="p-4 md:w-2/3 lg:w-3/5 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-primary text-xl mb-2">Kitchen Set Scandinavian</h3>
+                            <ul class="list-disc list-inside mb-10">
+                                <li class="text-primary font-light capitalize mb-2">
+                                    Gaya Desain :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        Scandinavian Minimalist
+                                    </span>
+                                </li>
+                                <li class="text-primary font-light capitalize mb-2">
+                                    rangka :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        plywood
+                                    </span>
+                                </li>
+                                <li class="text-primary font-light capitalize mb-2">
+                                    finishing :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        HPL, Wpc, Solid Surface
+                                    </span>
+                                </li>
+                            </ul>
+                            <div class="flex items-center mb-3">
+                                <div class="flex text-yellow-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M10.5734 4.39058C11.0224 3.00861 12.9776 3.00861 13.4266 4.39058L14.3574 7.25532C14.5582 7.87336 15.1341 8.2918 15.784 8.2918H18.7962C20.2492 8.2918 20.8534 10.1512 19.6778 11.0053L17.2409 12.7758C16.7152 13.1578 16.4952 13.8348 16.696 14.4529L17.6268 17.3176C18.0759 18.6996 16.4941 19.8488 15.3186 18.9947L12.8817 17.2242C12.3559 16.8422 11.6441 16.8422 11.1183 17.2242L8.68143 18.9947C7.50586 19.8488 5.92413 18.6996 6.37316 17.3176L7.30397 14.4529C7.50479 13.8348 7.2848 13.1578 6.75907 12.7758L4.32217 11.0053C3.1466 10.1512 3.75076 8.2918 5.20385 8.2918H8.21602C8.86586 8.2918 9.44179 7.87336 9.6426 7.25532L10.5734 4.39058Z"
+                                            fill="#FFC400" />
+                                        <mask id="mask0_194_2578" style="mask-type:alpha" maskUnits="userSpaceOnUse"
+                                            x="3" y="3" width="18" height="17">
+                                            <path
+                                                d="M13.4266 4.39058C12.9776 3.00861 11.0224 3.00861 10.5734 4.39058L9.6426 7.25532C9.44179 7.87336 8.86586 8.2918 8.21602 8.2918H5.20385C3.75076 8.2918 3.1466 10.1512 4.32217 11.0053L6.75907 12.7758C7.2848 13.1578 7.50479 13.8348 7.30397 14.4529L6.37316 17.3176C5.92414 18.6996 7.50585 19.8488 8.68143 18.9947L11.1183 17.2242C11.6441 16.8422 12.3559 16.8422 12.8817 17.2242L15.3186 18.9947C16.4941 19.8488 18.0759 18.6996 17.6268 17.3176L16.696 14.4529C16.4952 13.8348 16.7152 13.1578 17.2409 12.7758L19.6778 11.0053C20.8534 10.1512 20.2492 8.2918 18.7962 8.2918H15.784C15.1341 8.2918 14.5582 7.87336 14.3574 7.25532L13.4266 4.39058Z"
+                                                fill="#FFC400" />
+                                        </mask>
+                                        <g mask="url(#mask0_194_2578)">
+                                            <rect width="8.25" height="16.5" transform="matrix(-1 0 0 1 20.25 3)"
+                                                fill="#D9D9D9" />
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-relaxed italic">
+                                “Bagus, rapih, jadi percaya diri kalo ada tamu meski dapurnya langsung keliatan”
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 7 -->
+                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md flex flex-col md:flex-row" data-category="kitchen set">
+                    <div class="relative md:w-1/3 lg:w-2/5">
+                        <img src="{{ asset('img/portofolio/interior-office.webp') }}" alt="interior-office"
+                            class="w-full h-48 md:h-full object-cover">
+                        <div class="absolute top-3 left-3 bg-white text-primary text-xs font-medium px-2 py-1 rounded">
+                            Interior
+                        </div>
+                    </div>
+                    <div class="p-4 md:w-2/3 lg:w-3/5 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-primary text-xl mb-2">interior office</h3>
+                            <ul class="list-disc list-inside mb-10">
+                                <li class="text-primary font-light capitalize mb-2">
+                                    Gaya Desain :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        Scandinavian Minimalist
+                                    </span>
+                                </li>
+                                <li class="text-primary font-light capitalize mb-2">
+                                    rangka :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        plywood
+                                    </span>
+                                </li>
+                                <li class="text-primary font-light capitalize mb-2">
+                                    finishing :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        HPL, Wpc
+                                    </span>
+                                </li>
+                            </ul>
+                            <div class="flex items-center mb-3">
+                                <div class="flex text-yellow-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M10.5734 4.39058C11.0224 3.00861 12.9776 3.00861 13.4266 4.39058L14.3574 7.25532C14.5582 7.87336 15.1341 8.2918 15.784 8.2918H18.7962C20.2492 8.2918 20.8534 10.1512 19.6778 11.0053L17.2409 12.7758C16.7152 13.1578 16.4952 13.8348 16.696 14.4529L17.6268 17.3176C18.0759 18.6996 16.4941 19.8488 15.3186 18.9947L12.8817 17.2242C12.3559 16.8422 11.6441 16.8422 11.1183 17.2242L8.68143 18.9947C7.50586 19.8488 5.92413 18.6996 6.37316 17.3176L7.30397 14.4529C7.50479 13.8348 7.2848 13.1578 6.75907 12.7758L4.32217 11.0053C3.1466 10.1512 3.75076 8.2918 5.20385 8.2918H8.21602C8.86586 8.2918 9.44179 7.87336 9.6426 7.25532L10.5734 4.39058Z"
+                                            fill="#FFC400" />
+                                        <mask id="mask0_194_2578" style="mask-type:alpha" maskUnits="userSpaceOnUse"
+                                            x="3" y="3" width="18" height="17">
+                                            <path
+                                                d="M13.4266 4.39058C12.9776 3.00861 11.0224 3.00861 10.5734 4.39058L9.6426 7.25532C9.44179 7.87336 8.86586 8.2918 8.21602 8.2918H5.20385C3.75076 8.2918 3.1466 10.1512 4.32217 11.0053L6.75907 12.7758C7.2848 13.1578 7.50479 13.8348 7.30397 14.4529L6.37316 17.3176C5.92414 18.6996 7.50585 19.8488 8.68143 18.9947L11.1183 17.2242C11.6441 16.8422 12.3559 16.8422 12.8817 17.2242L15.3186 18.9947C16.4941 19.8488 18.0759 18.6996 17.6268 17.3176L16.696 14.4529C16.4952 13.8348 16.7152 13.1578 17.2409 12.7758L19.6778 11.0053C20.8534 10.1512 20.2492 8.2918 18.7962 8.2918H15.784C15.1341 8.2918 14.5582 7.87336 14.3574 7.25532L13.4266 4.39058Z"
+                                                fill="#FFC400" />
+                                        </mask>
+                                        <g mask="url(#mask0_194_2578)">
+                                            <rect width="8.25" height="16.5" transform="matrix(-1 0 0 1 20.25 3)"
+                                                fill="#D9D9D9" />
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-relaxed italic">
+                                “Bagus, sesuai desain. Sempet ada kesalahan ukuran dari pihak toko tapi masih bisa di
+                                adjust”
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 8 -->
+                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md flex flex-col md:flex-row" data-category="kitchen set">
+                    <div class="relative md:w-1/3 lg:w-2/5">
+                        <img src="{{ asset('img/portofolio/kitchen-set2.webp') }}" alt="kitchen set"
+                            class="w-full h-48 md:h-full object-cover">
+                        <div class="absolute top-3 left-3 bg-white text-primary text-xs font-medium px-2 py-1 rounded">
+                            kitchen set
+                        </div>
+                    </div>
+                    <div class="p-4 md:w-2/3 lg:w-3/5 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-primary text-xl mb-2">Kitchen Set Scandinavian</h3>
+                            <ul class="list-disc list-inside mb-10">
+                                <li class="text-primary font-light capitalize mb-2">
+                                    Gaya Desain :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        Scandinavian Minimalist
+                                    </span>
+                                </li>
+                                <li class="text-primary font-light capitalize mb-2">
+                                    rangka :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        plywood
+                                    </span>
+                                </li>
+                                <li class="text-primary font-light capitalize mb-2">
+                                    finishing :
+                                    <span class="font-bold text-base text-primary capitalize">
+                                        HPL, Wpc, Solid Surface
+                                    </span>
+                                </li>
+                            </ul>
+                            <div class="flex items-center mb-3">
+                                <div class="flex text-yellow-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M10.5734 4.39058C11.0224 3.00861 12.9776 3.00861 13.4266 4.39058L14.3574 7.25532C14.5582 7.87336 15.1341 8.2918 15.784 8.2918H18.7962C20.2492 8.2918 20.8534 10.1512 19.6778 11.0053L17.2409 12.7758C16.7152 13.1578 16.4952 13.8348 16.696 14.4529L17.6268 17.3176C18.0759 18.6996 16.4941 19.8488 15.3186 18.9947L12.8817 17.2242C12.3559 16.8422 11.6441 16.8422 11.1183 17.2242L8.68143 18.9947C7.50586 19.8488 5.92413 18.6996 6.37316 17.3176L7.30397 14.4529C7.50479 13.8348 7.2848 13.1578 6.75907 12.7758L4.32217 11.0053C3.1466 10.1512 3.75076 8.2918 5.20385 8.2918H8.21602C8.86586 8.2918 9.44179 7.87336 9.6426 7.25532L10.5734 4.39058Z"
+                                            fill="#FFC400" />
+                                        <mask id="mask0_194_2578" style="mask-type:alpha" maskUnits="userSpaceOnUse"
+                                            x="3" y="3" width="18" height="17">
+                                            <path
+                                                d="M13.4266 4.39058C12.9776 3.00861 11.0224 3.00861 10.5734 4.39058L9.6426 7.25532C9.44179 7.87336 8.86586 8.2918 8.21602 8.2918H5.20385C3.75076 8.2918 3.1466 10.1512 4.32217 11.0053L6.75907 12.7758C7.2848 13.1578 7.50479 13.8348 7.30397 14.4529L6.37316 17.3176C5.92414 18.6996 7.50585 19.8488 8.68143 18.9947L11.1183 17.2242C11.6441 16.8422 12.3559 16.8422 12.8817 17.2242L15.3186 18.9947C16.4941 19.8488 18.0759 18.6996 17.6268 17.3176L16.696 14.4529C16.4952 13.8348 16.7152 13.1578 17.2409 12.7758L19.6778 11.0053C20.8534 10.1512 20.2492 8.2918 18.7962 8.2918H15.784C15.1341 8.2918 14.5582 7.87336 14.3574 7.25532L13.4266 4.39058Z"
+                                                fill="#FFC400" />
+                                        </mask>
+                                        <g mask="url(#mask0_194_2578)">
+                                            <rect width="8.25" height="16.5" transform="matrix(-1 0 0 1 20.25 3)"
+                                                fill="#D9D9D9" />
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-relaxed italic">
+                                “Keren mas.. Tim nya bisa diajak ngebut buat ngejar launching”
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Load More Button -->
-            <div class="text-center mt-10">
-                <button class="bg-primary hover:bg-opacity-90 text-white font-medium py-2 px-6 rounded-full transition-all duration-300">
-                    Lihat Lebih Banyak
-                </button>
-            </div>
+
         </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-    
+
     <!-- Filter Portfolio Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Get all filter buttons
-            const filterButtons = document.querySelectorAll('.flex.flex-wrap.justify-center.gap-2.my-8 button');
-            // Get all portfolio items
-            const portfolioItems = document.querySelectorAll('.grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-4.gap-6.mt-8 > div');
-            
-            // Add click event to each filter button
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
+            // Get filter container and portfolio items using ID selectors
+            const filterContainer = document.getElementById('portfolio-filters');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            // Add click event to filter container (event delegation)
+            filterContainer.addEventListener('click', function(e) {
+                if (e.target.tagName === 'BUTTON') {
+                    const clickedButton = e.target;
+                    const filterValue = clickedButton.getAttribute('data-filter');
+
                     // Remove active class from all buttons
-                    filterButtons.forEach(btn => btn.classList.remove('active', 'bg-primary', 'text-white'));
-                    filterButtons.forEach(btn => btn.classList.add('bg-white', 'text-primary'));
-                    
+                    const allButtons = filterContainer.querySelectorAll('button');
+                    allButtons.forEach(btn => {
+                        btn.classList.remove('active', 'bg-primary', 'text-white');
+                        btn.classList.add('bg-white', 'text-primary');
+                    });
+
                     // Add active class to clicked button
-                    this.classList.add('active', 'bg-primary', 'text-white');
-                    this.classList.remove('bg-white', 'text-primary');
-                    
-                    const filterValue = this.textContent.trim();
-                    
-                    // Show all items if 'Semua' is clicked
-                    if (filterValue === 'Semua') {
-                        portfolioItems.forEach(item => {
-                            item.style.display = 'block';
-                        });
-                    } else {
-                        // Filter items based on category
-                        portfolioItems.forEach(item => {
-                            const category = item.querySelector('.absolute.top-3.left-3').textContent.trim();
-                            if (category === filterValue) {
-                                item.style.display = 'block';
-                            } else {
-                                item.style.display = 'none';
-                            }
-                        });
-                    }
-                });
+                    clickedButton.classList.add('active', 'bg-primary', 'text-white');
+                    clickedButton.classList.remove('bg-white', 'text-primary');
+
+                    // Filter portfolio items without changing their style
+                    portfolioItems.forEach(item => {
+                        const itemCategory = item.getAttribute('data-category');
+                        
+                        if (filterValue === 'all' || itemCategory === filterValue) {
+                            // Show the item with explicit display value to maintain layout
+                            item.style.display = 'flex';
+                        } else {
+                            // Hide the item
+                            item.style.display = 'none';
+                        }
+                    });
+                }
             });
-            
+
             // Set 'Semua' as active by default
-            filterButtons[0].classList.add('active', 'bg-primary', 'text-white');
-            filterButtons[0].classList.remove('bg-white', 'text-primary');
+            const defaultButton = document.getElementById('filter-all');
+            defaultButton.classList.add('active', 'bg-primary', 'text-white');
+            defaultButton.classList.remove('bg-white', 'text-primary');
         });
     </script>
 </body>
