@@ -5,69 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ $seoSetting ? $seoSetting->title : 'Interlife Furniture - Jasa Pembuatan Kitchen Set & Custom Furniture Berkualitas' }}</title>
+    <title>
+        {{ $seoSetting ? $seoSetting->title : 'Interlife Furniture - Jasa Pembuatan Kitchen Set & Custom Furniture Berkualitas' }}
+    </title>
 
     <!-- Meta Tags for SEO -->
     <meta name="description"
         content="{{ $seoSetting ? $seoSetting->description : 'Interlife Furniture menyediakan jasa pembuatan kitchen set, custom furniture, dan interior berkualitas tinggi dengan desain modern dan elegan. Wujudkan hunian impian Anda bersama kami.' }}">
-    @if($seoSetting && $seoSetting->keywords)
-    <meta name="keywords" content="{{ $seoSetting->keywords }}">
+    @if ($seoSetting && $seoSetting->keywords)
+        <meta name="keywords" content="{{ $seoSetting->keywords }}">
     @endif
-    @if($seoSetting && $seoSetting->author)
-    <meta name="author" content="{{ $seoSetting->author }}">
+    @if ($seoSetting && $seoSetting->author)
+        <meta name="author" content="{{ $seoSetting->author }}">
     @endif
     <meta name="robots" content="{{ $seoSetting ? $seoSetting->robots : 'index, follow' }}">
     <meta name="language" content="{{ $seoSetting ? $seoSetting->language : 'Indonesia' }}">
     <meta name="revisit-after" content="{{ $seoSetting ? $seoSetting->revisit_after : '7 days' }}">
-    @if($seoSetting && $seoSetting->geo_region)
-    <meta name="geo.region" content="{{ $seoSetting->geo_region }}">
+    @if ($seoSetting && $seoSetting->geo_region)
+        <meta name="geo.region" content="{{ $seoSetting->geo_region }}">
     @endif
-    @if($seoSetting && $seoSetting->geo_placename)
-    <meta name="geo.placename" content="{{ $seoSetting->geo_placename }}">
+    @if ($seoSetting && $seoSetting->geo_placename)
+        <meta name="geo.placename" content="{{ $seoSetting->geo_placename }}">
     @endif
-    @if($seoSetting && $seoSetting->theme_color)
-    <meta name="theme-color" content="{{ $seoSetting->theme_color }}">
+    @if ($seoSetting && $seoSetting->theme_color)
+        <meta name="theme-color" content="{{ $seoSetting->theme_color }}">
     @endif
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="{{ $seoSetting && $seoSetting->og_title ? $seoSetting->og_title : ($seoSetting ? $seoSetting->title : 'Interlife Furniture - Jasa Pembuatan Kitchen Set & Custom Furniture') }}">
+    <meta property="og:title"
+        content="{{ $seoSetting && $seoSetting->og_title ? $seoSetting->og_title : ($seoSetting ? $seoSetting->title : 'Interlife Furniture - Jasa Pembuatan Kitchen Set & Custom Furniture') }}">
     <meta property="og:description"
         content="{{ $seoSetting && $seoSetting->og_description ? $seoSetting->og_description : ($seoSetting ? $seoSetting->description : 'Wujudkan hunian impian Anda dengan kitchen set dan custom furniture berkualitas tinggi dari Interlife Furniture. Desain modern, elegan, dan terpercaya.') }}">
-    <meta property="og:image" content="{{ $seoSetting && $seoSetting->getFirstMediaUrl('og_images') ? $seoSetting->getFirstMediaUrl('og_images') : asset('img/general/bg-banner.webp') }}">
+    <meta property="og:image"
+        content="{{ $seoSetting && $seoSetting->getFirstMediaUrl('og_images') ? $seoSetting->getFirstMediaUrl('og_images') : asset('img/general/bg-banner.webp') }}">
     <meta property="og:image:width" content="{{ $seoSetting ? $seoSetting->og_image_width : '1200' }}">
     <meta property="og:image:height" content="{{ $seoSetting ? $seoSetting->og_image_height : '630' }}">
-    <meta property="og:url" content="{{ $seoSetting && $seoSetting->canonical_url ? $seoSetting->canonical_url : url('/') }}">
+    <meta property="og:url"
+        content="{{ $seoSetting && $seoSetting->canonical_url ? $seoSetting->canonical_url : url('/') }}">
     <meta property="og:type" content="{{ $seoSetting ? $seoSetting->og_type : 'website' }}">
-    @if($seoSetting && $seoSetting->og_site_name)
-    <meta property="og:site_name" content="{{ $seoSetting->og_site_name }}">
+    @if ($seoSetting && $seoSetting->og_site_name)
+        <meta property="og:site_name" content="{{ $seoSetting->og_site_name }}">
     @endif
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="{{ $seoSetting ? $seoSetting->twitter_card : 'summary_large_image' }}">
-    <meta name="twitter:title" content="{{ $seoSetting && $seoSetting->twitter_title ? $seoSetting->twitter_title : ($seoSetting ? $seoSetting->title : 'Interlife Furniture - Kitchen Set & Custom Furniture') }}">
+    <meta name="twitter:title"
+        content="{{ $seoSetting && $seoSetting->twitter_title ? $seoSetting->twitter_title : ($seoSetting ? $seoSetting->title : 'Interlife Furniture - Kitchen Set & Custom Furniture') }}">
     <meta name="twitter:description"
         content="{{ $seoSetting && $seoSetting->twitter_description ? $seoSetting->twitter_description : ($seoSetting ? $seoSetting->description : 'Jasa pembuatan kitchen set dan custom furniture berkualitas dengan desain modern dan elegan. Wujudkan hunian impian Anda bersama Interlife Furniture.') }}">
-    <meta name="twitter:image" content="{{ $seoSetting && $seoSetting->getFirstMediaUrl('twitter_images') ? $seoSetting->getFirstMediaUrl('twitter_images') : asset('img/general/bg-banner.webp') }}">
+    <meta name="twitter:image"
+        content="{{ $seoSetting && $seoSetting->getFirstMediaUrl('twitter_images') ? $seoSetting->getFirstMediaUrl('twitter_images') : asset('img/general/bg-banner.webp') }}">
 
     <!-- Pinterest Meta Tags -->
     <meta name="pinterest-rich-pin" content="true">
-    @if($seoSetting && $seoSetting->pinterest_description)
-    <meta name="pinterest:description" content="{{ $seoSetting->pinterest_description }}">
+    @if ($seoSetting && $seoSetting->pinterest_description)
+        <meta name="pinterest:description" content="{{ $seoSetting->pinterest_description }}">
     @endif
-    <meta name="pinterest:image" content="{{ $seoSetting && $seoSetting->getFirstMediaUrl('pinterest_images') ? $seoSetting->getFirstMediaUrl('pinterest_images') : asset('img/general/bg-banner.webp') }}">
+    <meta name="pinterest:image"
+        content="{{ $seoSetting && $seoSetting->getFirstMediaUrl('pinterest_images') ? $seoSetting->getFirstMediaUrl('pinterest_images') : asset('img/general/bg-banner.webp') }}">
 
     <!-- Microsoft Bing Meta Tags -->
-    @if($seoSetting && $seoSetting->msapplication_tile_color)
-    <meta name="msapplication-TileColor" content="{{ $seoSetting->msapplication_tile_color }}">
+    @if ($seoSetting && $seoSetting->msapplication_tile_color)
+        <meta name="msapplication-TileColor" content="{{ $seoSetting->msapplication_tile_color }}">
     @endif
-    <meta name="msapplication-TileImage" content="{{ $seoSetting && $seoSetting->getFirstMediaUrl('ms_tile_images') ? $seoSetting->getFirstMediaUrl('ms_tile_images') : asset('img/general/logo.png') }}">
+    <meta name="msapplication-TileImage"
+        content="{{ $seoSetting && $seoSetting->getFirstMediaUrl('ms_tile_images') ? $seoSetting->getFirstMediaUrl('ms_tile_images') : asset('img/general/logo.png') }}">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="{{ $seoSetting && $seoSetting->canonical_url ? $seoSetting->canonical_url : url('/') }}">
+    <link rel="canonical"
+        href="{{ $seoSetting && $seoSetting->canonical_url ? $seoSetting->canonical_url : url('/') }}">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ $seoSetting && $seoSetting->getFirstMediaUrl('favicons') ? $seoSetting->getFirstMediaUrl('favicons') : asset('favicon.ico') }}">
-    <link rel="apple-touch-icon" href="{{ $seoSetting && $seoSetting->getFirstMediaUrl('apple_touch_icons') ? $seoSetting->getFirstMediaUrl('apple_touch_icons') : asset('img/general/logo.png') }}">
+    <link rel="icon" type="image/x-icon"
+        href="{{ $seoSetting && $seoSetting->getFirstMediaUrl('favicons') ? $seoSetting->getFirstMediaUrl('favicons') : asset('favicon.ico') }}">
+    <link rel="apple-touch-icon"
+        href="{{ $seoSetting && $seoSetting->getFirstMediaUrl('apple_touch_icons') ? $seoSetting->getFirstMediaUrl('apple_touch_icons') : asset('img/general/logo.png') }}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -343,33 +355,35 @@
                                         </li>
                                     @endif
                                 </ul>
-                                @if ($portfolio->rating && $portfolio->rating > 0)
-                                    <div class="flex items-center mb-3">
-                                        <div class="flex text-yellow-400">
-                                            @for ($i = 1; $i <= 5; $i++)
-                                                @if ($i <= $portfolio->rating)
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4"
-                                                        viewBox="0 0 20 20" fill="currentColor">
-                                                        <path
-                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                                    </svg>
-                                                @else
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4"
-                                                        viewBox="0 0 20 20" fill="none" stroke="currentColor"
-                                                        stroke-width="1">
-                                                        <path
-                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                                    </svg>
-                                                @endif
-                                            @endfor
+                                <div class="bg-secondary rounded-lg p-4">
+                                    @if ($portfolio->rating && $portfolio->rating > 0)
+                                        <div class="flex items-center mb-3">
+                                            <div class="flex text-yellow-400">
+                                                @for ($i = 1; $i <= 5; $i++)
+                                                    @if ($i <= $portfolio->rating)
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4"
+                                                            viewBox="0 0 20 20" fill="currentColor">
+                                                            <path
+                                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                        </svg>
+                                                    @else
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4"
+                                                            viewBox="0 0 20 20" fill="none" stroke="currentColor"
+                                                            stroke-width="1">
+                                                            <path
+                                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                        </svg>
+                                                    @endif
+                                                @endfor
+                                            </div>
                                         </div>
-                                    </div>
-                                @endif
-                                @if ($portfolio->testimonial)
-                                    <p class="text-sm text-primary leading-relaxed italic">
-                                        "{{ $portfolio->testimonial }}"
-                                    </p>
-                                @endif
+                                    @endif
+                                    @if ($portfolio->testimonial)
+                                        <p class="text-sm text-primary leading-relaxed italic">
+                                            "{{ $portfolio->testimonial }}"
+                                        </p>
+                                    @endif
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -458,7 +472,8 @@
                                         {{ $process->description }}
                                     </p>
                                     @if ($process->additional_info)
-                                        <p class="text-primary font-semibold mt-2 text-sm italic bg-secondary p-4 rounded-lg">
+                                        <p
+                                            class="text-primary font-semibold mt-2 text-sm italic bg-secondary p-4 rounded-lg">
                                             {{ $process->additional_info }}
                                         </p>
                                     @endif
@@ -630,8 +645,8 @@
                                     Informasi Kontak</h3>
 
                                 @foreach ($contacts as $index => $contact)
-                                    <div class="flex items-start text-xs md:text-base {{ $index < count($contacts) - 1 ? 'mb-6' : '' }}" 
-                                         data-aos="fade-up" data-aos-delay="{{ 500 + ($index * 100) }}">
+                                    <div class="flex items-start text-xs md:text-base {{ $index < count($contacts) - 1 ? 'mb-6' : '' }}"
+                                        data-aos="fade-up" data-aos-delay="{{ 500 + $index * 100 }}">
                                         <div class="mr-3 mt-1">
                                             {!! $contact->icon !!}
                                         </div>
@@ -659,42 +674,42 @@
     @php
         $footerSetting = \App\Models\FooterSetting::where('is_active', true)->first();
     @endphp
-    
-    @if($footerSetting)
-    <footer class="bg-footer" data-aos="fade-up">
-        <div class="container mx-auto p-6">
-            <div class="flex flex-col md:flex-row md:justify-between justify-center items-center gap-5 md:gap-0">
-                <div class="flex items-center text-xs md:text-base text-white font-bold" data-aos="fade-right"
-                    data-aos-delay="100">
-                    {{ $footerSetting->title }}
-                </div>
-                <div data-aos="fade-left" data-aos-delay="200">
-                    <a href="{{ $footerSetting->button_url }}" target="_blank"
-                        class="inline-block text-xs md:text-base bg-secondary hover:bg-secondary/90 text-primary font-bold py-3 px-6 rounded-full transition-all duration-300">
-                        {{ $footerSetting->button_text }}
-                    </a>
+
+    @if ($footerSetting)
+        <footer class="bg-footer" data-aos="fade-up">
+            <div class="container mx-auto p-6">
+                <div class="flex flex-col md:flex-row md:justify-between justify-center items-center gap-5 md:gap-0">
+                    <div class="flex items-center text-xs md:text-base text-white font-bold" data-aos="fade-right"
+                        data-aos-delay="100">
+                        {{ $footerSetting->title }}
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="200">
+                        <a href="{{ $footerSetting->button_url }}" target="_blank"
+                            class="inline-block text-xs md:text-base bg-secondary hover:bg-secondary/90 text-primary font-bold py-3 px-6 rounded-full transition-all duration-300">
+                            {{ $footerSetting->button_text }}
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
     @else
-    <footer class="bg-footer" data-aos="fade-up">
-        <div class="container mx-auto p-6">
-            <div class="flex flex-col md:flex-row md:justify-between justify-center items-center gap-5 md:gap-0">
-                <div class="flex items-center text-xs md:text-base text-white font-bold" data-aos="fade-right"
-                    data-aos-delay="100">
-                    Wujudkan Hunian Impian Anda!
-                </div>
-                <div data-aos="fade-left" data-aos-delay="200">
-                    <a href="https://wa.me/+6285770622336" target="_blank"
-                        class="inline-block text-xs md:text-base bg-secondary hover:bg-secondary/90 text-primary font-bold py-3 px-6 rounded-full transition-all duration-300">
-                        Konsultasi
-                        Gratis Sekarang
-                    </a>
+        <footer class="bg-footer" data-aos="fade-up">
+            <div class="container mx-auto p-6">
+                <div class="flex flex-col md:flex-row md:justify-between justify-center items-center gap-5 md:gap-0">
+                    <div class="flex items-center text-xs md:text-base text-white font-bold" data-aos="fade-right"
+                        data-aos-delay="100">
+                        Wujudkan Hunian Impian Anda!
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="200">
+                        <a href="https://wa.me/+6285770622336" target="_blank"
+                            class="inline-block text-xs md:text-base bg-secondary hover:bg-secondary/90 text-primary font-bold py-3 px-6 rounded-full transition-all duration-300">
+                            Konsultasi
+                            Gratis Sekarang
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
     @endif
 
     <!-- Back to Top Button -->
