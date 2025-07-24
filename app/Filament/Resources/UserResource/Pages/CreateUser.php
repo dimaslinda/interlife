@@ -1,0 +1,46 @@
+<?php
+
+namespace App\Filament\Resources\UserResource\Pages;
+
+use App\Filament\Resources\UserResource;
+use Illuminate\Auth\Events\Registered;
+use Filament\Actions;
+use Filament\Resources\Pages\CreateRecord;
+use Filament\Notifications\Notification;
+
+class CreateUser extends CreateRecord
+{
+    protected static string $resource = UserResource::class;
+    
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
+    
+    protected function getCreatedNotification(): ?Notification
+    {
+        return Notification::make()
+            ->success()
+            ->title('User berhasil dibuat!')
+            ->body('User baru telah berhasil ditambahkan ke sistem.')
+            ->icon('heroicon-o-user-plus')
+            ->iconColor('success')
+            ->duration(5000);
+    }
+    
+
+    
+    protected function mutateFormDataBeforeCreate(array $data): array
+    {
+        // Email verification akan dilakukan melalui email yang dikirim
+        // Jangan set email_verified_at secara otomatis
+        
+        return $data;
+    }
+    
+    protected function afterCreate(): void
+    {
+        // Trigger event Registered untuk mengirim email verifikasi
+        event(new Registered($this->record));
+    }
+}

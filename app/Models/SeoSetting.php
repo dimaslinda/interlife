@@ -77,14 +77,14 @@ class SeoSetting extends Model implements HasMedia
 
         $this->addMediaCollection('favicons')
             ->singleFile()
-            ->acceptsMimeTypes(['image/x-icon', 'image/png']);
+            ->acceptsMimeTypes(['image/x-icon', 'image/vnd.microsoft.icon', 'image/png', 'image/webp']);
 
         $this->addMediaCollection('apple_touch_icons')
             ->singleFile()
-            ->acceptsMimeTypes(['image/png']);
+            ->acceptsMimeTypes(['image/png', 'image/webp']);
 
         $this->addMediaCollection('ms_tile_images')
             ->singleFile()
-            ->acceptsMimeTypes(['image/png']);
+            ->acceptsMimeTypes(['image/png', 'image/webp']);
     }
 }

@@ -46,6 +46,12 @@ class ManageSeoSettings extends Page implements HasForms
         try {
             $data = $this->form->getState();
             
+            // Remove media fields from data as they will be handled by SpatieMediaLibraryFileUpload
+            $mediaFields = ['og_images', 'twitter_images', 'pinterest_images', 'ms_tile_images', 'favicons', 'apple_touch_icons'];
+            foreach ($mediaFields as $field) {
+                unset($data[$field]);
+            }
+            
             if ($this->record) {
                 $this->record->update($data);
                 $isNew = false;
@@ -54,7 +60,7 @@ class ManageSeoSettings extends Page implements HasForms
                 $isNew = true;
             }
             
-            // Handle file uploads for media library
+            // Handle media uploads - SpatieMediaLibraryFileUpload handles this automatically
             $this->form->model($this->record)->saveRelationships();
             
             Notification::make()

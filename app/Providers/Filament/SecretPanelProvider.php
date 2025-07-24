@@ -6,6 +6,7 @@ use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
+use Illuminate\Auth\Middleware\EnsureEmailIsVerified;
 use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
@@ -55,6 +56,7 @@ class SecretPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
+                EnsureEmailIsVerified::class,
             ]);
     }
 }

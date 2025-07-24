@@ -10,6 +10,7 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Notifications\Notification;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -114,12 +115,11 @@ class SeoSettingResource extends Resource
                             ->label('OG Description')
                             ->rows(2),
                         
-                        Forms\Components\FileUpload::make('og_images')
+                        SpatieMediaLibraryFileUpload::make('og_images')
                             ->label('OG Image')
+                            ->collection('og_images')
                             ->image()
                             ->imageEditor()
-                            ->directory('seo/og-images')
-                            ->visibility('public')
                             ->helperText('Upload gambar untuk Open Graph (Facebook). Ukuran optimal: 1200x630px'),
                         
                         Forms\Components\TextInput::make('og_image_width')
@@ -164,12 +164,11 @@ class SeoSettingResource extends Resource
                             ->label('Twitter Description')
                             ->rows(2),
                         
-                        Forms\Components\FileUpload::make('twitter_images')
+                        SpatieMediaLibraryFileUpload::make('twitter_images')
                             ->label('Twitter Image')
+                            ->collection('twitter_images')
                             ->image()
                             ->imageEditor()
-                            ->directory('seo/twitter-images')
-                            ->visibility('public')
                             ->helperText('Upload gambar untuk Twitter Card. Ukuran optimal: 1200x630px'),
                     ])->columns(2),
                 
@@ -179,23 +178,21 @@ class SeoSettingResource extends Resource
                             ->label('Pinterest Description')
                             ->rows(2),
                         
-                        Forms\Components\FileUpload::make('pinterest_images')
+                        SpatieMediaLibraryFileUpload::make('pinterest_images')
                             ->label('Pinterest Image')
+                            ->collection('pinterest_images')
                             ->image()
                             ->imageEditor()
-                            ->directory('seo/pinterest-images')
-                            ->visibility('public')
                             ->helperText('Upload gambar untuk Pinterest. Ukuran optimal: 1000x1500px (2:3 ratio)'),
                         
                         Forms\Components\ColorPicker::make('msapplication_tile_color')
                             ->label('MS Application Tile Color'),
                         
-                        Forms\Components\FileUpload::make('ms_tile_images')
+                        SpatieMediaLibraryFileUpload::make('ms_tile_images')
                             ->label('MS Application Tile Image')
+                            ->collection('ms_tile_images')
                             ->image()
                             ->imageEditor()
-                            ->directory('seo/ms-tile-images')
-                            ->visibility('public')
                             ->helperText('Upload gambar untuk Microsoft Tile. Ukuran optimal: 144x144px'),
                     ])->columns(2),
                 
@@ -205,18 +202,16 @@ class SeoSettingResource extends Resource
                             ->label('Canonical URL')
                             ->url(),
                         
-                        Forms\Components\FileUpload::make('favicons')
+                        SpatieMediaLibraryFileUpload::make('favicons')
                             ->label('Favicon')
+                            ->collection('favicons')
                             ->image()
-                            ->directory('seo/favicons')
-                            ->visibility('public')
                             ->helperText('Upload favicon (.ico atau .png). Ukuran optimal: 32x32px atau 16x16px'),
                         
-                        Forms\Components\FileUpload::make('apple_touch_icons')
+                        SpatieMediaLibraryFileUpload::make('apple_touch_icons')
                             ->label('Apple Touch Icon')
+                            ->collection('apple_touch_icons')
                             ->image()
-                            ->directory('seo/apple-touch-icons')
-                            ->visibility('public')
                             ->helperText('Upload Apple Touch Icon (.png). Ukuran optimal: 180x180px'),
                     ])->columns(1),
             ]);
