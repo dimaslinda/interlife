@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('phone')->nullable()->after('status');
+            $table->string('phone')->nullable();
             $table->text('bio')->nullable()->after('phone');
-            $table->timestamp('last_login_at')->nullable()->after('avatar');
+            $table->timestamp('last_login_at')->nullable();
             $table->string('last_login_ip')->nullable()->after('last_login_at');
         });
     }
