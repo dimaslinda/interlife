@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Auth\Events\Login;
-use Illuminate\Auth\Events\Registered;
+
 use Illuminate\Support\Facades\Event;
 use App\Models\User;
 
@@ -33,9 +33,6 @@ class AppServiceProvider extends ServiceProvider
             }
         });
 
-        // Event listener untuk mengirim email verifikasi saat user baru dibuat
-        Event::listen(Registered::class, function (Registered $event) {
-            $event->user->sendEmailVerificationNotification();
-        });
+
     }
 }

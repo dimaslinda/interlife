@@ -92,11 +92,7 @@ class UserResource extends Resource
                             ->minLength(8)
                             ->placeholder('Minimal 8 karakter')
                             ->helperText(fn (string $context): string => $context === 'create' ? 'Minimal 8 karakter' : 'Kosongkan jika tidak ingin mengubah password'),
-                        Forms\Components\DateTimePicker::make('email_verified_at')
-                            ->label('Email Terverifikasi')
-                            ->displayFormat('d/m/Y H:i')
-                            ->helperText('Waktu email diverifikasi')
-                            ->visibleOn('edit'),
+
                     ])
                     ->columns(2),
             ]);
@@ -135,14 +131,7 @@ class UserResource extends Resource
                     ->sortable()
                     ->toggleable()
                     ->placeholder('Belum pernah login'),
-                Tables\Columns\IconColumn::make('email_verified_at')
-                    ->label('Email Verified')
-                    ->boolean()
-                    ->trueIcon('heroicon-o-check-badge')
-                    ->falseIcon('heroicon-o-x-mark')
-                    ->trueColor('success')
-                    ->falseColor('danger')
-                    ->toggleable(),
+
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Dibuat')
                     ->dateTime('d/m/Y')
@@ -152,9 +141,7 @@ class UserResource extends Resource
             ->filters([
 
 
-                Tables\Filters\Filter::make('email_verified')
-                    ->label('Email Terverifikasi')
-                    ->query(fn (Builder $query): Builder => $query->whereNotNull('email_verified_at')),
+
                 Tables\Filters\Filter::make('has_logged_in')
                     ->label('Pernah Login')
                     ->query(fn (Builder $query): Builder => $query->whereNotNull('last_login_at')),
